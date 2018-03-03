@@ -1,0 +1,18 @@
+<section class="section">
+  <div class="row">
+    <div class="col s12 m12 l12">
+      <img src="{{fileUpload.url}}" alt="{{fileUpload.name}}" style="max-width:350px" />
+    </div>
+  </div>
+  <div class="row">
+    <div class="col s12 m12 l12">
+      <p>Filename: {{fileUpload.name}}</p>
+      <p>URL: {{fileUpload.url}}</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col s12 m12 l12">
+      <button (click)='deleteFileUpload(fileUpload)' class="btn btn-danger btn-xs" style="float: right">Delete</button>
+    </div>
+  </div>
+</section>

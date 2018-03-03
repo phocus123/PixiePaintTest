@@ -1,0 +1,14 @@
+<section class="section">
+  <div class="container">
+    <div class="card">
+      <h3 class="center-align">List of Images</h3>
+      <div class="card-content">
+        <div *ngFor="let file of fileUploads">
+          <div class="card-content">
+            <details-upload [fileUpload]='file'></details-upload>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

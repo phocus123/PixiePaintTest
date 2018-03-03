@@ -6,10 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./edit-showcase.component.css']
 })
 export class EditShowcaseComponent implements OnInit {
+  homePage: boolean;
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {
+    this.homePage = false;
   }
-
 }

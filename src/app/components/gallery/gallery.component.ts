@@ -6,10 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./gallery.component.css']
 })
 export class GalleryComponent implements OnInit {
+  homePage: boolean;
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {
+    this.homePage = false;
   }
-
 }
