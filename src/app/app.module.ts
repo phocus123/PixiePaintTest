@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-
 import { AppComponent } from './app.component';
 import { AboutComponent } from './components/home/about/about.component';
 import { ServicesComponent } from './components/home/services/services.component';
@@ -12,7 +11,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { LoginComponent } from './components/login/login.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
 import { EditShowcaseComponent } from './components/edit-showcase/edit-showcase.component';
-
+import { HomeComponent } from './components/home/home/home.component';
+import { AppRoutingModule } from './/app-routing.module';
 
 @NgModule({
   declarations: [
@@ -25,12 +25,11 @@ import { EditShowcaseComponent } from './components/edit-showcase/edit-showcase.
     NavbarComponent,
     LoginComponent,
     GalleryComponent,
-    EditShowcaseComponent
+    EditShowcaseComponent,
+    HomeComponent
   ],
-  imports: [
-    BrowserModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
