@@ -3,7 +3,9 @@
   background: url('../../../../assets/img/christmas.jpg');
   background-size: cover;
   background-position: center;
-  min-height: 500px;
+  min-height: 300px;
+  border-top: #333 solid 5px;
+  border-bottom: #333 solid 5px;
 }
 
 .primary-overlay {
@@ -14,4 +16,12 @@
   height: 100%;
   width: 100%;
   overflow: hidden;
+}
+
+.contact-selector li {
+  opacity: 0;
+}
+
+.italic {
+  font-style: italic;
 }
