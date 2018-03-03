@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+declare let $: any;
 
 @Component({
   selector: 'app-slider',
@@ -6,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./slider.component.css']
 })
 export class SliderComponent implements OnInit {
-
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {
+    $('.slider').slider({
+      indicators: false,
+      height: $(window).height()
+    });
   }
-
 }

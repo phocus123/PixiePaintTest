@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+declare let $: any;
 
 @Component({
   selector: 'app-navbar',
@@ -6,10 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {
+    $('.button-collapse').sideNav();
   }
-
 }
