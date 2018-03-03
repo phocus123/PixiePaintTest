@@ -1,0 +1,17 @@
+.contact-image {
+  position: relative;
+  background: url('../../../../assets/img/christmas.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 500px;
+}
+
+.primary-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
