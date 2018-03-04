@@ -11,6 +11,8 @@ import { FileUpload } from '../../../models/file-upload';
 export class FormUploadComponent implements OnInit {
   selectedFiles: FileList;
   currentFileUpload: FileUpload;
+  captionTitle: string;
+  captionBody: string;
   progress: { percentage: number } = { percentage: 0 };
 
   constructor(private uploadService: UploadFileService) {}
@@ -29,9 +31,12 @@ export class FormUploadComponent implements OnInit {
 
   upload() {
     const file = this.selectedFiles.item(0);
+    console.log(file);
     this.selectedFiles = undefined;
 
     this.currentFileUpload = new FileUpload(file);
+    this.currentFileUpload.captionTitle = this.captionTitle;
+    this.currentFileUpload.captionBody = this.captionBody;
     this.uploadService.pushFileToStorage(this.currentFileUpload, this.progress);
   }
 }

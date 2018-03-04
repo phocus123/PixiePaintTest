@@ -11,9 +11,7 @@ import { UploadFileService } from '../../../services/upload-file.service';
 export class ListUploadComponent implements OnInit {
   fileUploads: any[];
 
-  constructor(private uploadService: UploadFileService) {
-    console.log('test');
-  }
+  constructor(private uploadService: UploadFileService) {}
 
   ngOnInit() {
     // Use snapshotChanges().map() to store the key

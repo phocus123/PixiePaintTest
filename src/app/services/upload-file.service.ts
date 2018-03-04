@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
+import { Observable } from 'rxjs/observable';
 import * as firebase from 'firebase';
 
 import { FileUpload } from '../models/file-upload';
@@ -7,6 +8,7 @@ import { FileUpload } from '../models/file-upload';
 @Injectable()
 export class UploadFileService {
   private basePath = '/images';
+  files: Observable<FileUpload[]>;
 
   constructor(private db: AngularFireDatabase) {}
 
@@ -44,6 +46,11 @@ export class UploadFileService {
 
   getFileUploads(): AngularFireList<FileUpload> {
     return this.db.list(this.basePath);
+  }
+
+  getImages(): Observable<FileUpload[]> {
+    this.files = this.db.list<FileUpload>(this.basePath).valueChanges();
+    return this.files;
   }
 
   deleteFileUpload(fileUpload: FileUpload) {

@@ -21,6 +21,7 @@ import { FormUploadComponent } from './components/edit-showcase/form-upload/form
 import { ListUploadComponent } from './components/edit-showcase/list-upload/list-upload.component';
 import { UploadFileService } from './services/upload-file.service';
 import { NavbarTwoComponent } from './components/navbar-two/navbar-two.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { NavbarTwoComponent } from './components/navbar-two/navbar-two.component
     BrowserModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    FormsModule
   ],
   providers: [UploadFileService],
   bootstrap: [AppComponent]
