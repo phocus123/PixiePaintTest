@@ -1,29 +1,29 @@
-<div class="navbar-fixed">
-  <nav class="transparent">
+<div>
+  <nav class="pinned">
     <div class="container">
       <div class="nav-wrapper">
-        <a href="" class="logo-brand right">Pixie Paint</a>
+        <a href="" class="brand-logo right light">Pixie Paint</a>
         <a href="" data-activates="mobile-nav" class="button-collapse">
           <i class="material-icons">menu</i>
         </a>
         <ul class="left hide-on-med-and-down">
-          <li *ngIf="homePage">
-            <a href="#home">Home</a>
+          <li *ngIf="homePage && !galleryPage">
+            <a href="#home" class="light">Home</a>
           </li>
-          <li *ngIf="!homePage">
-            <a routerLink="">Home</a>
-          </li>
-          <li>
-            <a href="#about">About</a>
+          <li *ngIf="galleryPage">
+            <a routerLink="" class="light">Home</a>
           </li>
           <li>
-            <a href="#services">Services</a>
+            <a href="#about" class="light">About</a>
           </li>
           <li>
-            <a href="#contact">Contact</a>
+            <a href="#services" class="light">Services</a>
           </li>
           <li>
-            <a routerLink="gallery">Gallery</a>
+            <a href="#contact" class="light">Contact</a>
+          </li>
+          <li>
+            <a routerLink="gallery" class="light">Gallery</a>
           </li>
         </ul>
       </div>

@@ -20,7 +20,6 @@ import { DetailsUploadComponent } from './components/edit-showcase/details-uploa
 import { FormUploadComponent } from './components/edit-showcase/form-upload/form-upload.component';
 import { ListUploadComponent } from './components/edit-showcase/list-upload/list-upload.component';
 import { UploadFileService } from './services/upload-file.service';
-import { NavbarTwoComponent } from './components/navbar-two/navbar-two.component';
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
@@ -38,8 +37,7 @@ import { FormsModule } from '@angular/forms';
     HomeComponent,
     DetailsUploadComponent,
     FormUploadComponent,
-    ListUploadComponent,
-    NavbarTwoComponent
+    ListUploadComponent
   ],
   imports: [
     BrowserModule,

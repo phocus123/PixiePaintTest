@@ -1,17 +1,35 @@
+<div class="loader-container">
+  <div class="main-loader">
+    <div class="preloader-wrapper big active">
+      <div class="spinner-layer spinner-blue-only">
+        <div class="circle-clipper left">
+          <div class="circle"></div>
+        </div>
+        <div class="gap-patch">
+          <div class="circle"></div>
+        </div>
+        <div class="circle-clipper right">
+          <div class="circle"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div id="home" class="slider scrollspy">
-  <ul class="slides slider-custom" *ngIf="files?.length > 0">
+  <ul class="slides slider-custom" *ngIf="files?.length > 0;">
     <li>
       <img src="{{files[0].url}}" alt="">
       <div class="caption center-align ">
-        <h3>{{files[0].captionTitle}}</h3>
-        <h5>{{files[0].captionBody}}</h5>
+        <h3 class="heading">{{files[0].captionTitle}}</h3>
+        <h5 class="light">{{files[0].captionBody}}</h5>
       </div>
     </li>
     <li>
       <img src="{{files[1].url}}" alt="">
       <div class="caption right-align ">
-        <h3>{{files[1].captionTitle}}</h3>
-        <h5>{{files[1].captionBody}}</h5>
+        <h3 class="heading">{{files[1].captionTitle}}</h3>
+        <h5 class="light">{{files[1].captionBody}}</h5>
       </div>
     </li>
   </ul>

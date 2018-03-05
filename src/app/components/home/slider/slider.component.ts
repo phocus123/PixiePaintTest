@@ -30,6 +30,9 @@ export class SliderComponent implements OnInit {
         indicators: false,
         height: $(window).height()
       });
+      $('.main-loader').toggleClass();
+      $('.loader-container').toggleClass();
+      $('.preloader-wrapper').toggleClass();
     }
   }
 }

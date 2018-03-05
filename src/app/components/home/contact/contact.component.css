@@ -3,7 +3,7 @@
   background: url('../../../../assets/img/christmas.jpg');
   background-size: cover;
   background-position: center;
-  min-height: 450px;
+  min-height: 400px;
   border-top: #333 solid 5px;
   border-bottom: #333 solid 5px;
 }

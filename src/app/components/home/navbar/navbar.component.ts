@@ -37,18 +37,18 @@ export class NavbarComponent implements OnInit {
       },
       {
         selector: '.contact-selector',
-        offset: 265,
+        offset: 220,
         callback: function(el) {
           Materialize.showStaggeredList($(el));
         }
-      },
-      {
-        selector: '.navbar-fixed',
-        offset: 1920,
-        callback: function() {
-          $('nav').removeClass('transparent');
-          $('nav').addClass('blue-grey darken-3');
-        }
+        // },
+        // {
+        //   selector: '.navbar-fixed',
+        //   offset: 1920,
+        //   callback: function() {
+        //     $('nav').removeClass('transparent');
+        //     $('nav').addClass('blue-grey darken-3');
+        //   }
       }
     ];
     Materialize.scrollFire(options);
