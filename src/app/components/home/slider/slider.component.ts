@@ -4,7 +4,6 @@ import { Observable } from 'rxjs/observable';
 import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
 import { FileUpload } from '../../../models/file-upload';
 import { UploadFileService } from '../../../services/upload-file.service';
-import { Subscription } from 'rxjs/Subscription';
 
 declare let $: any;
 

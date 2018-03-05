@@ -3,7 +3,7 @@
   background: url('../../../../assets/img/halloween.jpeg');
   background-size: cover;
   background-position: center;
-  min-height: 400px;
+  min-height: 200px;
   border-top: #333 solid 5px;
   border-bottom: #333 solid 5px;
 }
@@ -24,4 +24,8 @@
 
 .italic {
   font-style: italic;
+}
+
+.pinker {
+  color: #ff00ff;
 }

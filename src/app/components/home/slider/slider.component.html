@@ -15,22 +15,23 @@
     </div>
   </div>
 </div>
-
-<div id="home" class="slider scrollspy">
-  <ul class="slides slider-custom" *ngIf="files?.length > 0;">
-    <li>
-      <img src="{{files[0].url}}" alt="">
-      <div class="caption center-align ">
-        <h3 class="heading">{{files[0].captionTitle}}</h3>
-        <h5 class="light">{{files[0].captionBody}}</h5>
-      </div>
-    </li>
-    <li>
-      <img src="{{files[1].url}}" alt="">
-      <div class="caption right-align ">
-        <h3 class="heading">{{files[1].captionTitle}}</h3>
-        <h5 class="light">{{files[1].captionBody}}</h5>
-      </div>
-    </li>
-  </ul>
+<div>
+  <div id="home" class="slider scrollspy">
+    <ul class="slides slider-custom" *ngIf="files?.length > 0;">
+      <li class="test">
+        <img src="{{files[0].url}}" alt="">
+        <div class="caption center-align overlay">
+          <h3 class="heading shadow">{{files[0].captionTitle}}</h3>
+          <h5 class="light shadow">{{files[0].captionBody}}</h5>
+        </div>
+      </li>
+      <!-- <li>
+        <img src="{{files[1].url}}" alt="">
+        <div class="caption right-align ">
+          <h3 class="heading">{{files[1].captionTitle}}</h3>
+          <h5 class="light">{{files[1].captionBody}}</h5>
+        </div>
+      </li> -->
+    </ul>
+  </div>
 </div>
