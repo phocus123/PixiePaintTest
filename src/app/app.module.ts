@@ -15,12 +15,15 @@ import { HomeComponent } from './components/home/home/home.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireAuthModule } from 'angularfire2/auth';
 import { environment } from '../environments/environment.prod';
 import { DetailsUploadComponent } from './components/edit-showcase/details-upload/details-upload.component';
 import { FormUploadComponent } from './components/edit-showcase/form-upload/form-upload.component';
 import { ListUploadComponent } from './components/edit-showcase/list-upload/list-upload.component';
 import { UploadFileService } from './services/upload-file.service';
+import { AuthService } from './services/auth.service';
 import { FormsModule } from '@angular/forms';
+import { LoginFormComponent } from './components/login/login-form/login-form.component';
 
 @NgModule({
   declarations: [
@@ -37,16 +40,18 @@ import { FormsModule } from '@angular/forms';
     HomeComponent,
     DetailsUploadComponent,
     FormUploadComponent,
-    ListUploadComponent
+    ListUploadComponent,
+    LoginFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
+    AngularFireAuthModule,
     FormsModule
   ],
-  providers: [UploadFileService],
+  providers: [UploadFileService, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

@@ -21,7 +21,7 @@ export class SliderComponent implements OnInit {
     this.service.getImages().subscribe(files => (this.files = files));
 
     $(document).ready(function() {
-      setTimeout(initiateSlider, 2000);
+      setTimeout(initiateSlider, 3000);
     });
 
     function initiateSlider() {
