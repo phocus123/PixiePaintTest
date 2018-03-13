@@ -9,11 +9,8 @@
           <i class="material-icons">menu</i>
         </a>
         <ul class="left hide-on-med-and-down">
-          <li *ngIf="homePage && !galleryPage">
+          <li>
             <a href="#home" class="light black-text">Home</a>
-          </li>
-          <li *ngIf="galleryPage">
-            <a routerLink="" class="light black-text">Home</a>
           </li>
           <li>
             <a href="#about" class="light black-text">About</a>
@@ -33,11 +30,8 @@
   </nav>
 </div>
 <ul class="side-nav" id="mobile-nav">
-  <li *ngIf="homePage">
+  <li>
     <a href="#home">Home</a>
-  </li>
-  <li *ngIf="!homePage">
-    <a routerLink="">Home</a>
   </li>
   <li>
     <a href="">About</a>

@@ -18,22 +18,28 @@
   <ul class="contact-selector">
     <li>
       <h2 class="center">Contact Us</h2>
+      <br>
     </li>
   </ul>
   <br>
   <div class="container">
     <div class="row">
-      <div class="col s12 m6 l6 center-align">
+      <div class="col s12 m3 l3 center-align">
+      </div>
+      <div class="col s12 m3 l3 center-align">
         <i class="fas fa-phone fa-3x"></i>
         <br>
-        <h4>Telephone</h4>
+        <h5>Telephone</h5>
         <p class="light">1234123123</p>
       </div>
-      <div class="col s12 m6 l6 center-align">
+      <div class="col s12 m3 l3 center-align">
         <i class="fas fa-envelope fa-3x"></i>
         <br>
-        <h4>Email</h4>
+        <h5>Email</h5>
         <p class="light">hello@pixiepaint.gmail.com</p>
+      </div>
+      <div class="col s12 m3 l3 center-align">
+
       </div>
       <!-- <div class="col s12 m4 l4 center-align">
         <i class="fab fa-facebook-square fa-3x"></i>
@@ -43,52 +49,55 @@
       </div> -->
     </div>
   </div>
-  <br>
-  <h2 class="center-align">Or send us a message here</h2>
-  <br>
+
   <div class="container">
-    <div class="card">
-      <div class="card-content">
-        <div class="row">
-          <div class="input-field col s12 m6 l6">
-            <i class="material-icons prefix">account_circle</i>
-            <input id="firstName" type="text" class="validate">
-            <label for="firstName">First Name</label>
+    <form (submit)="onSubmit()">
+      <div class="card">
+        <br>
+        <p class="center-align card-title">Or send a direct message</p>
+        <div class="card-content">
+          <div class="row">
+            <div class="input-field col s12 m6 l6">
+              <i class="material-icons prefix">account_circle</i>
+              <input name="firstName" type="text" class="validate">
+              <label for="firstName">First Name</label>
+            </div>
+            <div class="input-field col s12 m6 l6">
+              <i class="material-icons prefix">account_circle</i>
+              <input name="lastName" type="text" class="validate">
+              <label for="lastName">Last Name</label>
+            </div>
           </div>
-          <div class="input-field col s12 m6 l6">
-            <i class="material-icons prefix">account_circle</i>
-            <input id="lastName" type="text" class="validate">
-            <label for="lastName">Last Name</label>
+          <div class="row">
+            <div class="input-field col s12 m6 l6">
+              <i class="material-icons prefix">email</i>
+              <input type="email" name="email" class="validates">
+              <label for="email">Email</label>
+            </div>
+            <div class="input-field col s12 m6 l6">
+              <i class="material-icons prefix">phone</i>
+              <input type="number" name="number" class="validates">
+              <label for="number">Phone Number</label>
+            </div>
           </div>
-        </div>
-        <div class="row">
-          <div class="input-field col s12 m6 l6">
-            <i class="material-icons prefix">email</i>
-            <input type="email" id="email" class="validates">
-            <label for="email">Email</label>
+          <div class="row">
+            <div class="input-field col s12">
+              <i class="material-icons prefix">message</i>
+              <textarea class="materialize-textarea" id="reason" cols="30" rows="10"></textarea>
+              <label for="reason">Message</label>
+            </div>
           </div>
-          <div class="input-field col s12 m6 l6">
-            <i class="material-icons prefix">phone</i>
-            <input type="number" id="number" class="validates">
-            <label for="number">Phone Number</label>
-          </div>
-        </div>
-        <div class="row">
-          <div class="input-field col s12">
-            <i class="material-icons prefix">message</i>
-            <textarea class="materialize-textarea" id="reason" cols="30" rows="10"></textarea>
-            <label for="reason">Message</label>
-          </div>
-        </div>
-        <div class="row">
-          <div class="input-field col s12 m12 l12 center">
-            <button class="btn light-blue darken-1 waves-effect waves-light" type="submit">Submit
-              <i class="material-icons right">send</i>
-            </button>
+          <div class="row">
+            <div class="input-field col s12 m12 l12 center">
+              <button class="btn light-blue darken-1 waves-effect waves-light" type="submit">Submit
+                <i class="material-icons right">send</i>
+              </button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </form>
+
 
   </div>
 </section>

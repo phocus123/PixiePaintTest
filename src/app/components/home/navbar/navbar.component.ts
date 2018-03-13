@@ -8,12 +8,9 @@ declare let Materialize: any;
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-  homePage: boolean;
   constructor() {}
 
   ngOnInit() {
-    this.homePage = true;
-
     $('.button-collapse').sideNav();
 
     $(document).ready(function() {
