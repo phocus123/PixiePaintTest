@@ -1,5 +1,11 @@
+// Modules.
+
+import { FormsModule } from '@angular/forms';
+import { AppRoutingModule } from './/app-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+
+// Components.
 
 import { AppComponent } from './app.component';
 import { AboutComponent } from './components/home/about/about.component';
@@ -12,18 +18,23 @@ import { LoginComponent } from './components/login/login.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
 import { EditShowcaseComponent } from './components/edit-showcase/edit-showcase.component';
 import { HomeComponent } from './components/home/home/home.component';
-import { AppRoutingModule } from './/app-routing.module';
+import { LoginFormComponent } from './components/login/login-form/login-form.component';
+import { InstaFeedComponent } from './components/gallery/insta-feed/insta-feed.component';
+import { FormUploadComponent } from './components/edit-showcase/form-upload/form-upload.component';
+import { ListUploadComponent } from './components/edit-showcase/list-upload/list-upload.component';
+import { DetailsUploadComponent } from './components/edit-showcase/details-upload/details-upload.component';
+
+// Firebase.
+
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { environment } from '../environments/environment.prod';
-import { DetailsUploadComponent } from './components/edit-showcase/details-upload/details-upload.component';
-import { FormUploadComponent } from './components/edit-showcase/form-upload/form-upload.component';
-import { ListUploadComponent } from './components/edit-showcase/list-upload/list-upload.component';
+
+// Services.
+
 import { UploadFileService } from './services/upload-file.service';
 import { AuthService } from './services/auth.service';
-import { FormsModule } from '@angular/forms';
-import { LoginFormComponent } from './components/login/login-form/login-form.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +52,8 @@ import { LoginFormComponent } from './components/login/login-form/login-form.com
     DetailsUploadComponent,
     FormUploadComponent,
     ListUploadComponent,
-    LoginFormComponent
+    LoginFormComponent,
+    InstaFeedComponent
   ],
   imports: [
     BrowserModule,
