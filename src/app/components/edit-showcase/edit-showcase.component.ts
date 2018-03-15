@@ -1,16 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 
-@Component({
+@Component(
+{
   selector: 'app-edit-showcase',
   templateUrl: './edit-showcase.component.html',
   styleUrls: ['./edit-showcase.component.css']
 })
-export class EditShowcaseComponent implements OnInit {
+export class EditShowcaseComponent implements OnInit 
+{
   homePage: boolean;
 
-  constructor() {}
+  constructor() { }
 
-  ngOnInit() {
+  ngOnInit() 
+  {
     this.homePage = false;
   }
 }

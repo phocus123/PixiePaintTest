@@ -1,6 +1,6 @@
 // Modules.
 
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './/app-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -35,9 +35,12 @@ import { environment } from '../environments/environment.prod';
 
 import { UploadFileService } from './services/upload-file.service';
 import { AuthService } from './services/auth.service';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
-@NgModule({
-  declarations: [
+@NgModule(
+{
+  declarations: 
+  [
     AppComponent,
     AboutComponent,
     ServicesComponent,
@@ -53,17 +56,24 @@ import { AuthService } from './services/auth.service';
     FormUploadComponent,
     ListUploadComponent,
     LoginFormComponent,
-    InstaFeedComponent
+    InstaFeedComponent,
+    NotFoundComponent
   ],
-  imports: [
+  imports: 
+  [
     BrowserModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
     AngularFireAuthModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
-  providers: [UploadFileService, AuthService],
+  providers: 
+  [
+    UploadFileService, 
+    AuthService
+  ],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }

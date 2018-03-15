@@ -3,33 +3,40 @@ import { Component, OnInit } from '@angular/core';
 import { UploadFileService } from '../../../services/upload-file.service';
 import { FileUpload } from '../../../models/file-upload';
 
-@Component({
+@Component(
+{
   selector: 'form-upload',
   templateUrl: './form-upload.component.html',
   styleUrls: ['./form-upload.component.css']
 })
-export class FormUploadComponent implements OnInit {
+export class FormUploadComponent implements OnInit 
+{
   selectedFiles: FileList;
   currentFileUpload: FileUpload;
   captionTitle: string;
   captionBody: string;
   progress: { percentage: number } = { percentage: 0 };
 
-  constructor(private uploadService: UploadFileService) {}
+  constructor(private uploadService: UploadFileService) { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
-  selectFile(event) {
+  selectFile(event) 
+  {
     const file = event.target.files.item(0);
 
-    if (file.type.match('image.*')) {
+    if (file.type.match('image.*')) 
+    {
       this.selectedFiles = event.target.files;
-    } else {
+    } 
+    else 
+    {
       alert('invalid format!');
     }
   }
 
-  upload() {
+  upload() 
+  {
     const file = this.selectedFiles.item(0);
     console.log(file);
     this.selectedFiles = undefined;
