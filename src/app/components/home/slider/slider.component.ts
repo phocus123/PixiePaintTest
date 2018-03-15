@@ -26,19 +26,18 @@ export class SliderComponent implements OnInit {
 
     function initiateSlider() {
       $('.slider').slider({
-        indicators: true,
+        indicators: false,
         height: $(window).height()
       });
 
       $('.main-loader').toggleClass();
       $('.loader-container').toggleClass();
       $('.preloader-wrapper').toggleClass();
-      $('.pixie-modal').modal({
+      $('.modal').modal({
         dismissible: true, // Modal can be dismissed by clicking outside of the modal
-        opacity: 0, // Opacity of modal background
+        opacity: 90, // Opacity of modal background
         endingTop: '30%' // Ending top style attribute
       });
-      // $('#modal1').modal('open');
     }
   }
 }
