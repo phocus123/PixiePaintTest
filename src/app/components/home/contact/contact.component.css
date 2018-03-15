@@ -1,11 +1,9 @@
-.contact-image {
+.testimonial-image {
   position: relative;
-  background: url('../../../../assets/img/christmas.jpg');
+  background: url('../../../../assets/img/testimonial2.jpg');
   background-size: cover;
   background-position: center;
   min-height: 400px;
-  border-top: #333 solid 5px;
-  border-bottom: #333 solid 5px;
 }
 
 .primary-overlay {
@@ -24,4 +22,12 @@
 
 .italic {
   font-style: italic;
+}
+
+.showcase-three {
+  background: url('../../../../assets/img/showcase3.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 600px;
 }

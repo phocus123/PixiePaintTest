@@ -7,31 +7,25 @@ import { UploadFileService } from '../../../services/upload-file.service';
 
 declare let $: any;
 
-@Component(
-{
+@Component({
   selector: 'app-slider',
   templateUrl: './slider.component.html',
   styleUrls: ['./slider.component.css']
 })
-export class SliderComponent implements OnInit 
-{
+export class SliderComponent implements OnInit {
   files: FileUpload[];
 
   constructor(private service: UploadFileService) {}
 
-  ngOnInit() 
-  {
+  ngOnInit() {
     this.service.getImages().subscribe(files => (this.files = files));
 
-    $(document).ready(function() 
-    {
+    $(document).ready(function() {
       setTimeout(initiateSlider, 3000);
     });
 
-    function initiateSlider() 
-    {
-      $('.slider').slider(
-      {
+    function initiateSlider() {
+      $('.slider').slider({
         indicators: true,
         height: $(window).height()
       });
@@ -39,13 +33,12 @@ export class SliderComponent implements OnInit
       $('.main-loader').toggleClass();
       $('.loader-container').toggleClass();
       $('.preloader-wrapper').toggleClass();
-      $('.pixie-modal').modal(
-      {
+      $('.pixie-modal').modal({
         dismissible: true, // Modal can be dismissed by clicking outside of the modal
         opacity: 0, // Opacity of modal background
         endingTop: '30%' // Ending top style attribute
       });
-      $('#modal1').modal('open');
+      // $('#modal1').modal('open');
     }
   }
 }

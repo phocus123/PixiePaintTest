@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './services.component.html',
   styleUrls: ['./services.component.css']
 })
+<<<<<<< Updated upstream
 export class ServicesComponent implements OnInit 
 {
 
@@ -13,4 +14,10 @@ export class ServicesComponent implements OnInit
 
   ngOnInit() { }
 
+=======
+export class ServicesComponent implements OnInit {
+  constructor() {}
+
+  ngOnInit() {}
+>>>>>>> Stashed changes
 }
