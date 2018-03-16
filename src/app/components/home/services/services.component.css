@@ -26,15 +26,6 @@
   font-style: italic;
 }
 
-.showcase-two {
-  background: url('../../../../assets/img/showcase2.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  min-height: 400px;
-}
-
-.action-button {
-  position: relative;
-  top: 370px;
-}
+/* .parallax-container {
+  height: 700px;
+} */

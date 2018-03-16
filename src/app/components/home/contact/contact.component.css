@@ -20,6 +20,10 @@
   opacity: 0;
 }
 
+.testimonial-selector li {
+  opacity: 0;
+}
+
 .italic {
   font-style: italic;
 }
@@ -31,3 +35,12 @@
   background-repeat: no-repeat;
   min-height: 600px;
 }
+
+.contact-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* .parallax-container {
+  height: 700px;
+} */

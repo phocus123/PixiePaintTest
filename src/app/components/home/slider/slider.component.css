@@ -16,3 +16,30 @@
   align-items: center;
   justify-content: center;
 }
+
+.main-header {
+  background: url('../../../../assets/img/showcase.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  min-height: 600px;
+  position: relative;
+}
+
+.primary-overlay {
+  background: linear-gradient(
+    to right,
+    rgba(183, 29, 121, 0.4),
+    rgba(255, 214, 33, 0.4)
+  );
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.showcase {
+  padding-top: 170px;
+}

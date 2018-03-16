@@ -7,22 +7,21 @@ import { EditShowcaseComponent } from './components/edit-showcase/edit-showcase.
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { AuthGuard } from './guards/auth.guard';
 
-const routes: Routes = 
-[
-  { 
-    path: '', 
+const routes: Routes = [
+  {
+    path: '',
     component: HomeComponent
   },
-  { 
-    path: 'Gallery', 
-    component: GalleryComponent 
-  },
-  { 
-    path: 'Login', 
-    component: LoginComponent 
+  {
+    path: 'gallery',
+    component: GalleryComponent
   },
   {
-    path: 'Edit',
+    path: 'login',
+    component: LoginComponent
+  },
+  {
+    path: 'edit',
     component: EditShowcaseComponent,
     canActivate: [AuthGuard]
   },
@@ -32,11 +31,9 @@ const routes: Routes =
   }
 ];
 
-@NgModule(
-{
+@NgModule({
   exports: [RouterModule],
   imports: [RouterModule.forRoot(routes)],
   providers: [AuthGuard]
 })
-
-export class AppRoutingModule { }
+export class AppRoutingModule {}

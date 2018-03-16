@@ -1,16 +1,28 @@
 import { Component, OnInit } from '@angular/core';
+declare let $;
 
-@Component(
-{
+@Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.css']
 })
-export class FooterComponent implements OnInit 
-{
+export class FooterComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
+  ngOnInit() {
+    this.scrollToTop();
+  }
 
-  ngOnInit() { }
+  scrollToTop() {
+    $('#footerButton').click(function() {
+      // Animate Movement to the Top of the Page.
+      $('html body').animate({ scrollTop: 0 }, 500, 'swing');
+      // Stop Animation.
+      $('html body').stop();
+    });
+  }
 
+  test() {
+    console.log('test');
+  }
 }

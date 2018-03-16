@@ -3,15 +3,9 @@
 nav {
   background: rgba(201, 228, 202, 0.5);
   box-shadow: 0px 1px 6px #c9e4ca;
-  /* background: rgba(255, 255, 255, 0.5);
-  box-shadow: none; */
   z-index: 1;
 }
 
 .pinned {
   position: fixed;
 }
-
-/* .background {
-  height: 180px;
-} */

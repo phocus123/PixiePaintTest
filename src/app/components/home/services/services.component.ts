@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+declare let $: any;
 
 @Component({
   selector: 'app-services',
@@ -8,5 +9,9 @@ import { Component, OnInit } from '@angular/core';
 export class ServicesComponent implements OnInit {
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    $(document).ready(function() {
+      $('.parallax').parallax();
+    });
+  }
 }

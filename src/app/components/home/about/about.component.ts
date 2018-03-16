@@ -9,5 +9,9 @@ declare let $: any;
 export class AboutComponent implements OnInit {
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    $(document).ready(function() {
+      $('.parallax').parallax();
+    });
+  }
 }
