@@ -1,8 +1,9 @@
 @import 'styles.css';
 
 nav {
-  background: rgba(201, 228, 202, 0.5);
-  box-shadow: 0px 1px 6px #c9e4ca;
+  /* background: rgba(48, 154, 186, 0.5);
+  box-shadow: 0px 1px 6px #309aba; */
+  background: rgba(192, 132, 244, 0.9);
   z-index: 1;
 }
 
