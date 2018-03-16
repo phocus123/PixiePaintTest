@@ -33,11 +33,6 @@ export class SliderComponent implements OnInit {
       $('.main-loader').toggleClass();
       $('.loader-container').toggleClass();
       $('.preloader-wrapper').toggleClass();
-      $('.modal').modal({
-        dismissible: true, // Modal can be dismissed by clicking outside of the modal
-        opacity: 0.9, // Opacity of modal background
-        endingTop: '30%' // Ending top style attribute
-      });
     }
   }
 }

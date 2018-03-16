@@ -1,31 +1,3 @@
-.testimonial-image {
-  position: relative;
-  background: url('../../../../assets/img/testimonial1.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  min-height: 400px;
-  /* margin-top: 3rem; */
-}
-
-.primary-overlay {
-  background: rgba(0, 0, 0, 0.7);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
 .service-selector li {
   opacity: 0;
 }
-
-.italic {
-  font-style: italic;
-}
-
-/* .parallax-container {
-  height: 700px;
-} */

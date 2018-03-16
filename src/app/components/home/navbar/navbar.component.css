@@ -1,8 +1,6 @@
 @import 'styles.css';
 
 nav {
-  /* background: rgba(48, 154, 186, 0.9);
-  box-shadow: 0px 1px 6px #309aba; */
   background: rgba(192, 132, 244, 0.7);
   box-shadow: 0px 1px 6px #c084f4;
   z-index: 1;
