@@ -17,15 +17,6 @@ export class ContactComponent implements OnInit {
   messageContent: string;
   html: string;
 
-  message: Message = {
-    firstName: this.firstName,
-    lastName: this.lastName,
-    email: this.email,
-    telephone: this.telephone,
-    messageContent: this.messageContent,
-    html: ''
-  };
-
   @ViewChild('messageForm') form: any;
 
   constructor(private messageService: UploadMessageService) {}
