@@ -11,6 +11,7 @@ export class UploadMessageService {
 
   constructor(private db: AngularFireDatabase) {}
 
+  // Save message to firebase database.
   saveMessageData(message: Message) {
     this.db.list(`${this.messagePath}/`).push(message);
   }
