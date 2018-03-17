@@ -14,3 +14,30 @@
   text-decoration: none;
   color: inherit;
 }
+
+@media screen and (max-width: 600px) {
+  .parallax {
+    display: none;
+  }
+
+  .mobile-img {
+    background-image: url('../../../../assets/img/showcase1.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+  }
+
+  .mobile-img2 {
+    background-image: url('../../../../assets/img/showcase3.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+  }
+
+  .mobile-img3 {
+    background-image: url('../../../../assets/img/testimonial1.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+  }
+}

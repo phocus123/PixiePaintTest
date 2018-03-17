@@ -1,3 +1,16 @@
 .service-selector li {
   opacity: 0;
 }
+
+@media screen and (max-width: 600px) {
+  .parallax {
+    display: none;
+  }
+
+  .mobile-img {
+    background-image: url('../../../../assets/img/testimonial2.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+  }
+}
