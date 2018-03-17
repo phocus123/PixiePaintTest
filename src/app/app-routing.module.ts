@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home/home.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
 import { LoginComponent } from './components/login/login.component';
-import { EditShowcaseComponent } from './components/edit-showcase/edit-showcase.component';
+import { EditComponent } from './components/edit/edit.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { AuthGuard } from './guards/auth.guard';
 
@@ -22,7 +22,7 @@ const routes: Routes = [
   },
   {
     path: 'edit',
-    component: EditShowcaseComponent,
+    component: EditComponent,
     canActivate: [AuthGuard]
   },
   {

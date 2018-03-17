@@ -16,13 +16,13 @@ import { FooterComponent } from './components/home/footer/footer.component';
 import { NavbarComponent } from './components/home/navbar/navbar.component';
 import { LoginComponent } from './components/login/login.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
-import { EditShowcaseComponent } from './components/edit-showcase/edit-showcase.component';
+import { EditComponent } from './components/edit/edit.component';
 import { HomeComponent } from './components/home/home/home.component';
 import { LoginFormComponent } from './components/login/login-form/login-form.component';
 import { InstaFeedComponent } from './components/gallery/insta-feed/insta-feed.component';
-import { FormUploadComponent } from './components/edit-showcase/form-upload/form-upload.component';
-import { ListUploadComponent } from './components/edit-showcase/list-upload/list-upload.component';
-import { DetailsUploadComponent } from './components/edit-showcase/details-upload/details-upload.component';
+import { FormUploadComponent } from './components/edit/form-upload/form-upload.component';
+import { ListUploadComponent } from './components/edit/list-upload/list-upload.component';
+import { DetailsUploadComponent } from './components/edit/details-upload/details-upload.component';
 
 // Firebase.
 
@@ -37,11 +37,10 @@ import { UploadFileService } from './services/upload-file.service';
 import { AuthService } from './services/auth.service';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { UploadMessageService } from './services/upload-message.service';
+import { DetailsMessagesComponent } from './components/edit/details-messages/details-messages.component';
 
-@NgModule(
-{
-  declarations: 
-  [
+@NgModule({
+  declarations: [
     AppComponent,
     AboutComponent,
     ServicesComponent,
@@ -51,17 +50,17 @@ import { UploadMessageService } from './services/upload-message.service';
     NavbarComponent,
     LoginComponent,
     GalleryComponent,
-    EditShowcaseComponent,
+    EditComponent,
     HomeComponent,
     DetailsUploadComponent,
     FormUploadComponent,
     ListUploadComponent,
     LoginFormComponent,
     InstaFeedComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    DetailsMessagesComponent
   ],
-  imports: 
-  [
+  imports: [
     BrowserModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
@@ -70,11 +69,12 @@ import { UploadMessageService } from './services/upload-message.service';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: 
-  [
-    UploadFileService, 
-    AuthService, UploadMessageService
+  providers: [
+    UploadMessageService,
+    UploadFileService,
+    AuthService,
+    UploadMessageService
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

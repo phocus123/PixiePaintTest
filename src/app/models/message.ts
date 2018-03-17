@@ -1,7 +1,7 @@
 export interface Message {
-  firstName: string;
-  lastName: string;
+  name: string;
   email: string;
   telephone: string;
   messageContent: string;
+  html: string;
 }

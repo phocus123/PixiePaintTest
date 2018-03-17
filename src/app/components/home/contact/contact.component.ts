@@ -22,11 +22,16 @@ export class ContactComponent implements OnInit {
 
   onSubmit() {
     this.message = {
-      firstName: this.firstName,
-      lastName: this.lastName,
+      name: this.firstName.concat(' ' + this.lastName),
       telephone: this.telephone,
       email: this.email,
-      messageContent: this.messageContent
+      messageContent: this.messageContent,
+      html: `
+       <div>From: ${this.firstName.concat(' ' + this.lastName)}</div>
+       <div>Email: <a href="mailto:${this.email}">${this.email}</a></div>
+       <div>Telephone: ${this.telephone}</div>
+       <div>Message: ${this.messageContent}</div>
+       `
     };
 
     this.messageService.saveMessageData(this.message);

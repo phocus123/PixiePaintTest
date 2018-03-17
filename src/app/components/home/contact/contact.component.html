@@ -2,36 +2,30 @@
   <div class="container">
     <ul class="testimonial-selector">
       <li>
-        <h2 class="center">Testimonials</h2>
+        <h2 class="center purple-text darken-4">Testimonials</h2>
         <br>
       </li>
     </ul>
     <div class="row">
       <div class="col s12 m4 l4 card">
-        <div class="card-title center">
-          testimonial
-        </div>
         <div class="card-content">
-          <p class="flow-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius exercitationem asperiores ducimus veritatis voluptate
+          <p class="flow-text italic">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius exercitationem asperiores ducimus veritatis voluptate
             sit minima? Odio qui nam maxime sed blanditiis nulla deserunt ducimus?</p>
+          <p class="flow-text right-align">Author</p>
         </div>
       </div>
       <div class="col s12 m4 l4 card">
-        <div class="card-title center">
-          testimonial
-        </div>
         <div class="card-content">
-          <p class="flow-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius exercitationem asperiores ducimus veritatis voluptate
+          <p class="flow-text italic">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius exercitationem asperiores ducimus veritatis voluptate
             sit minima? Odio qui nam maxime sed blanditiis nulla deserunt ducimus?</p>
+          <p class="flow-text right-align">Author</p>
         </div>
       </div>
       <div class="col s12 m4 l4 card">
-        <div class="card-title center">
-          testimonial
-        </div>
         <div class="card-content">
-          <p class="flow-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius exercitationem asperiores ducimus veritatis voluptate
+          <p class="flow-text italic">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius exercitationem asperiores ducimus veritatis voluptate
             sit minima? Odio qui nam maxime sed blanditiis nulla deserunt ducimus?</p>
+          <p class="flow-text right-align">Author</p>
         </div>
       </div>
     </div>
@@ -49,7 +43,7 @@
   <div class="container">
     <ul class="contact-selector">
       <li>
-        <h2 class="center">Contact Us</h2>
+        <h2 class="center purple-text darken-4">Contact Us</h2>
         <br>
       </li>
     </ul>
@@ -59,25 +53,25 @@
         <div class="row">
           <div class="col s12 m4 l4 center-align">
             <a href="mailto:hello@pixiepaint.com.au" class="contact-link">
-              <i class="fas fa-envelope fa-3x"></i>
+              <i class="fas fa-envelope fa-2x bluer"></i>
             </a>
             <br>
-            <h5>Email</h5>
-            <p class="light">hello@pixiepaint.com.au</p>
+            <h5 class="pinker heading">Email</h5>
+            <p class="flow-text">hello@pixiepaint.com.au</p>
           </div>
           <div class="col s12 m4 l4 center-align">
-            <i class="fas fa-phone fa-3x"></i>
+            <i class="fas fa-phone fa-2x bluer"></i>
             <br>
-            <h5>Telephone</h5>
-            <p class="light">0438 940 723</p>
+            <h5 class="pinker heading">Telephone</h5>
+            <p class="flow-text">0438 940 723</p>
           </div>
           <div class="col s12 m4 l4 center-align">
             <a href="#contactForm" class="contact-link">
-              <i class="fas fa-comment-alt fa-3x"></i>
+              <i class="fas fa-comment-alt fa-2x bluer"></i>
             </a>
             <br>
-            <h5>Direct Message</h5>
-            <p class="light">see below</p>
+            <h5 class="pinker heading">Direct Message</h5>
+            <p class="flow-text">see below</p>
           </div>
         </div>
       </div>
@@ -96,35 +90,39 @@
   <div class="row container">
     <section class="section scrollspy" id="contactForm">
       <div class="container">
+        <div class="center">
+          <img src="../../../../assets/img/logo_stars.png" alt="">
+        </div>
         <form (submit)="onSubmit()">
-          <p class="center-align flow-text">How can we make your event magical?</p>
+          <p class="center-align heading pinker">How can we make your event magical?</p>
+          <br>
           <div class="row">
             <div class="input-field col s12 m6 l6">
-              <i class="material-icons prefix">account_circle</i>
+              <i class="material-icons prefix bluer">account_circle</i>
               <input name="firstName" type="text" class="validate" [(ngModel)]="firstName">
               <label for="firstName">First Name</label>
             </div>
             <div class="input-field col s12 m6 l6">
-              <i class="material-icons prefix">account_circle</i>
+              <i class="material-icons prefix bluer">account_circle</i>
               <input name="lastName" type="text" class="validate" [(ngModel)]="lastName">
               <label for="lastName">Last Name</label>
             </div>
           </div>
           <div class="row">
             <div class="input-field col s12 m6 l6">
-              <i class="material-icons prefix">email</i>
+              <i class="material-icons prefix bluer">email</i>
               <input type="email" name="email" class="validates" [(ngModel)]="email">
               <label for="email">Email</label>
             </div>
             <div class="input-field col s12 m6 l6">
-              <i class="material-icons prefix">phone</i>
+              <i class="material-icons prefix bluer">phone</i>
               <input type="text" name="telephone" class="validates" [(ngModel)]="telephone">
               <label for="telephone">Phone Number</label>
             </div>
           </div>
           <div class="row">
             <div class="input-field col s12">
-              <i class="material-icons prefix">message</i>
+              <i class="material-icons prefix bluer">message</i>
               <textarea class="materialize-textarea" name="messageContent" cols="30" rows="10" [(ngModel)]="messageContent"></textarea>
               <label for="messageContent">Message</label>
             </div>
