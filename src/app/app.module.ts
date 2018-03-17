@@ -23,6 +23,8 @@ import { InstaFeedComponent } from './components/gallery/insta-feed/insta-feed.c
 import { FormUploadComponent } from './components/edit/form-upload/form-upload.component';
 import { ListUploadComponent } from './components/edit/list-upload/list-upload.component';
 import { DetailsUploadComponent } from './components/edit/details-upload/details-upload.component';
+import { ListMessagesComponent } from './components/edit/list-messages/list-messages.component';
+import { DetailsMessageComponent } from './components/edit/details-message/details-message.component';
 
 // Firebase.
 
@@ -37,7 +39,6 @@ import { UploadFileService } from './services/upload-file.service';
 import { AuthService } from './services/auth.service';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { UploadMessageService } from './services/upload-message.service';
-import { DetailsMessagesComponent } from './components/edit/details-messages/details-messages.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +59,8 @@ import { DetailsMessagesComponent } from './components/edit/details-messages/det
     LoginFormComponent,
     InstaFeedComponent,
     NotFoundComponent,
-    DetailsMessagesComponent
+    ListMessagesComponent,
+    DetailsMessageComponent
   ],
   imports: [
     BrowserModule,

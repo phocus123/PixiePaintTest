@@ -1,5 +1,8 @@
 <section class="section">
   <div class="container">
+    <div class="center">
+      <img src="../../../../assets/img/logo_stars.png" alt="">
+    </div>
     <ul class="testimonial-selector">
       <li>
         <h2 class="center purple-text darken-4">Testimonials</h2>
@@ -41,6 +44,9 @@
 
 <section class="section scrollspy" id="contact">
   <div class="container">
+    <div class="center">
+      <img src="../../../../assets/img/logo_stars.png" alt="">
+    </div>
     <ul class="contact-selector">
       <li>
         <h2 class="center purple-text darken-4">Contact Us</h2>
@@ -93,43 +99,43 @@
         <div class="center">
           <img src="../../../../assets/img/logo_stars.png" alt="">
         </div>
-        <form (submit)="onSubmit()">
+        <form #messageForm="ngForm" (ngSubmit)="onSubmit(messageForm)">
           <p class="center-align heading pinker">How can we make your event magical?</p>
           <br>
           <div class="row">
             <div class="input-field col s12 m6 l6">
               <i class="material-icons prefix bluer">account_circle</i>
-              <input name="firstName" type="text" class="validate" [(ngModel)]="firstName">
-              <label for="firstName">First Name</label>
+              <input name="firstName" type="text" class="validate" [(ngModel)]="firstName" required>
+              <label for="firstName" data-error="First name required" data-success="Right">First Name</label>
             </div>
             <div class="input-field col s12 m6 l6">
               <i class="material-icons prefix bluer">account_circle</i>
-              <input name="lastName" type="text" class="validate" [(ngModel)]="lastName">
-              <label for="lastName">Last Name</label>
+              <input name="lastName" type="text" class="validate" [(ngModel)]="lastName" required>
+              <label for="lastName" data-error="Last name required" data-success="Right">Last Name</label>
             </div>
           </div>
           <div class="row">
             <div class="input-field col s12 m6 l6">
               <i class="material-icons prefix bluer">email</i>
-              <input type="email" name="email" class="validates" [(ngModel)]="email">
-              <label for="email">Email</label>
+              <input type="email" name="email" class="validate" [(ngModel)]="email" required>
+              <label for="email" data-error="Valid email address required" data-success="Right">Email</label>
             </div>
             <div class="input-field col s12 m6 l6">
               <i class="material-icons prefix bluer">phone</i>
-              <input type="text" name="telephone" class="validates" [(ngModel)]="telephone">
-              <label for="telephone">Phone Number</label>
+              <input type="text" name="telephone" class="validates" [(ngModel)]="telephone" required>
+              <label for="telephone" data-error="Telephone required" data-success="Right">Phone Number</label>
             </div>
           </div>
           <div class="row">
             <div class="input-field col s12">
               <i class="material-icons prefix bluer">message</i>
-              <textarea class="materialize-textarea" name="messageContent" cols="30" rows="10" [(ngModel)]="messageContent"></textarea>
-              <label for="messageContent">Message</label>
+              <textarea class="materialize-textarea" name="messageContent" cols="30" rows="10" [(ngModel)]="messageContent" required></textarea>
+              <label for="messageContent" data-error="Message required" data-success="Right">Message</label>
             </div>
           </div>
           <div class="row">
             <div class="input-field col s12 m12 l12 center">
-              <button class="btn light-blue darken-1 waves-effect waves-light" type="submit">Submit
+              <button [disabled]="!messageForm.form.valid" class="btn light-blue darken-1 waves-effect waves-light" type="submit">Submit
                 <i class="material-icons right">send</i>
               </button>
             </div>

@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import { Message } from '../../../models/message';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { Message } from '../../../models/Message';
 import { UploadMessageService } from '../../../services/upload-message.service';
+
+declare let Materialize;
 
 @Component({
   selector: 'app-contact',
@@ -8,32 +10,37 @@ import { UploadMessageService } from '../../../services/upload-message.service';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent implements OnInit {
-  message: Message;
-
   firstName: string;
   lastName: string;
-  telephone: string;
   email: string;
+  telephone: string;
   messageContent: string;
+  html: string;
+
+  message: Message = {
+    firstName: this.firstName,
+    lastName: this.lastName,
+    email: this.email,
+    telephone: this.telephone,
+    messageContent: this.messageContent,
+    html: ''
+  };
+
+  @ViewChild('messageForm') form: any;
 
   constructor(private messageService: UploadMessageService) {}
 
   ngOnInit() {}
 
-  onSubmit() {
-    this.message = {
-      name: this.firstName.concat(' ' + this.lastName),
-      telephone: this.telephone,
-      email: this.email,
-      messageContent: this.messageContent,
-      html: `
-       <div>From: ${this.firstName.concat(' ' + this.lastName)}</div>
-       <div>Email: <a href="mailto:${this.email}">${this.email}</a></div>
-       <div>Telephone: ${this.telephone}</div>
-       <div>Message: ${this.messageContent}</div>
-       `
-    };
-
-    this.messageService.saveMessageData(this.message);
+  onSubmit({ value }: { value: Message }) {
+    value.html = `
+       <div>From: ${value.firstName.concat(' ' + value.lastName)}</div>
+       <div>Email: <a href="mailto:${value.email}">${value.email}</a></div>
+       <div>Telephone: ${value.telephone}</div>
+       <div>Message: ${value.messageContent}</div>
+       `;
+    this.messageService.saveMessageData(value);
+    Materialize.toast('Message Sent!', 4000, 'deep-purple accent-1');
+    this.form.reset();
   }
 }

@@ -57,7 +57,7 @@ export class UploadFileService {
     return this.files;
   }
 
-  /* Deleting an Image from the List */
+  /* Removing the Image Storage Bucket */
   deleteFileUpload(fileUpload: FileUpload) {
     this.deleteFileDatabase(fileUpload.key)
       .then(() => {
@@ -66,7 +66,7 @@ export class UploadFileService {
       .catch(error => console.log(error));
   }
 
-  /* Removing the Image Storage Bucket */
+  /* Deleting an Image from the List */
   private deleteFileDatabase(key: string) {
     return this.db.list(`${this.imagePath}/`).remove(key);
   }

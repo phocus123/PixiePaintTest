@@ -13,7 +13,7 @@ exports.sendContactMessage = functions.database
     const snapshot = event.data;
 
     // Only send email for new messages.
-    if (snapshot.previous.val() || !snapshot.val().name) {
+    if (snapshot.previous.val()) {
       return;
     }
 
@@ -21,7 +21,7 @@ exports.sendContactMessage = functions.database
 
     const mailOptions = {
       to: 'markschafers123@gmail.com',
-      subject: `Enquiry from ${val.name}`,
+      subject: `Enquiry from ${val.email}`,
       html: val.html
     };
 

@@ -1,5 +1,7 @@
 export interface Message {
-  name: string;
+  key?: string;
+  firstName: string;
+  lastName: string;
   email: string;
   telephone: string;
   messageContent: string;

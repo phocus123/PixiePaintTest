@@ -1,0 +1,14 @@
+<section class="section padding-top">
+  <div class="container">
+    <div class="card">
+      <div class="card-content">
+        <span class="card-title center">Messages</span>
+        <div *ngFor="let message of messages">
+          <div class="card-content black-text">
+            <details-message [messages]='message'></details-message>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

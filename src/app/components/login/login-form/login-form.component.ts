@@ -16,7 +16,7 @@ export class LoginFormComponent implements OnInit {
   ngOnInit() {
     this.authService.getAuth().subscribe(auth => {
       if (auth) {
-        this.router.navigate([`edit-showcase`]);
+        this.router.navigate([`edit`]);
       }
     });
   }
@@ -25,7 +25,7 @@ export class LoginFormComponent implements OnInit {
     this.authService
       .login(this.email, this.password)
       .then(res => {
-        this.router.navigate([`edit-showcase`]);
+        this.router.navigate([`edit`]);
       })
       .catch(err => {
         console.log(err);
