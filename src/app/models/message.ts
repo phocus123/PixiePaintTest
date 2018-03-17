@@ -1,7 +1,7 @@
-export interface Message 
-{
-    message_sender: string,
-    message_recipient: string,
-    message_subject: string,
-    message_text: string
+export interface Message {
+  firstName: string;
+  lastName: string;
+  email: string;
+  telephone: string;
+  messageContent: string;
 }

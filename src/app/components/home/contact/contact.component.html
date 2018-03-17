@@ -101,32 +101,32 @@
           <div class="row">
             <div class="input-field col s12 m6 l6">
               <i class="material-icons prefix">account_circle</i>
-              <input name="firstName" type="text" class="validate">
+              <input name="firstName" type="text" class="validate" [(ngModel)]="firstName">
               <label for="firstName">First Name</label>
             </div>
             <div class="input-field col s12 m6 l6">
               <i class="material-icons prefix">account_circle</i>
-              <input name="lastName" type="text" class="validate">
+              <input name="lastName" type="text" class="validate" [(ngModel)]="lastName">
               <label for="lastName">Last Name</label>
             </div>
           </div>
           <div class="row">
             <div class="input-field col s12 m6 l6">
               <i class="material-icons prefix">email</i>
-              <input type="email" name="email" class="validates">
+              <input type="email" name="email" class="validates" [(ngModel)]="email">
               <label for="email">Email</label>
             </div>
             <div class="input-field col s12 m6 l6">
               <i class="material-icons prefix">phone</i>
-              <input type="text" name="number" class="validates">
-              <label for="number">Phone Number</label>
+              <input type="text" name="telephone" class="validates" [(ngModel)]="telephone">
+              <label for="telephone">Phone Number</label>
             </div>
           </div>
           <div class="row">
             <div class="input-field col s12">
               <i class="material-icons prefix">message</i>
-              <textarea class="materialize-textarea" id="reason" cols="30" rows="10"></textarea>
-              <label for="reason">Message</label>
+              <textarea class="materialize-textarea" name="messageContent" cols="30" rows="10" [(ngModel)]="messageContent"></textarea>
+              <label for="messageContent">Message</label>
             </div>
           </div>
           <div class="row">

@@ -36,6 +36,7 @@ import { environment } from '../environments/environment.prod';
 import { UploadFileService } from './services/upload-file.service';
 import { AuthService } from './services/auth.service';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { UploadMessageService } from './services/upload-message.service';
 
 @NgModule(
 {
@@ -72,7 +73,7 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
   providers: 
   [
     UploadFileService, 
-    AuthService
+    AuthService, UploadMessageService
   ],
   bootstrap: [AppComponent]
 })
