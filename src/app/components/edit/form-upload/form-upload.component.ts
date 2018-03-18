@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { UploadFileService } from '../../../services/upload-file.service';
-import { FileUpload } from '../../../models/file-upload';
+import { FileUpload } from '../../../models/FileUpload';
 
 @Component({
   selector: 'form-upload',

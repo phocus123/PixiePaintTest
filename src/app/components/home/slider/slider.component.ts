@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { Observable } from 'rxjs/observable';
 import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
-import { FileUpload } from '../../../models/file-upload';
+import { FileUpload } from '../../../models/FileUpload';
 import { UploadFileService } from '../../../services/upload-file.service';
 
 declare let $: any;

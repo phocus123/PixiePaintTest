@@ -4,6 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './/app-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 // Components.
 
@@ -39,6 +40,7 @@ import { UploadFileService } from './services/upload-file.service';
 import { AuthService } from './services/auth.service';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { UploadMessageService } from './services/upload-message.service';
+import { InstagramService } from './services/instagram.service';
 
 @NgModule({
   declarations: [
@@ -69,13 +71,15 @@ import { UploadMessageService } from './services/upload-message.service';
     AngularFireDatabaseModule,
     AngularFireAuthModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [
     UploadMessageService,
     UploadFileService,
     AuthService,
-    UploadMessageService
+    UploadMessageService,
+    InstagramService
   ],
   bootstrap: [AppComponent]
 })

@@ -3,7 +3,7 @@ import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
 import { Observable } from 'rxjs/observable';
 import * as firebase from 'firebase';
 
-import { FileUpload } from '../models/file-upload';
+import { FileUpload } from '../models/FileUpload';
 
 @Injectable()
 export class UploadFileService {

@@ -1,6 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { AuthService } from '../../../services/auth.service';
 import { Router } from '@angular/router';
+import { LoginDetails } from '../../../models/LoginDetails';
+
+declare let Materialize;
 
 @Component({
   selector: 'app-login-form',
@@ -10,6 +13,8 @@ import { Router } from '@angular/router';
 export class LoginFormComponent implements OnInit {
   email: string;
   password: string;
+
+  @ViewChild('loginForm') form: any;
 
   constructor(private authService: AuthService, private router: Router) {}
 
@@ -21,14 +26,15 @@ export class LoginFormComponent implements OnInit {
     });
   }
 
-  onSubmit() {
+  onSubmit({ value }: { value: LoginDetails }) {
     this.authService
-      .login(this.email, this.password)
+      .login(value.email, value.password)
       .then(res => {
+        Materialize.toast('Logging in', 4000, 'green');
         this.router.navigate([`edit`]);
       })
       .catch(err => {
-        console.log(err);
+        Materialize.toast(err, 4000, 'red');
       });
   }
 }

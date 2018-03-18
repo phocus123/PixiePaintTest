@@ -8,7 +8,6 @@ import { Message } from '../models/Message';
 @Injectable()
 export class UploadMessageService {
   private messagePath: string = '/messages';
-  messages: Observable<Message[]>;
 
   constructor(private db: AngularFireDatabase) {}
 
