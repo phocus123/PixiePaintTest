@@ -8,11 +8,11 @@
       <div class="row">
         <div *ngIf="dataArray?.length > 0;">
           <div *ngFor="let data of dataArray; let o = odd; let e = even">
-            <div class="col s12 m6 l6" *ngIf="e">
-              <img class="responsive-image" width="430px" src="{{data.images.standard_resolution.url}}">
+            <div class="col s12 l6" *ngIf="e">
+              <img class="test" width="410px" src="{{data.images.standard_resolution.url}}">
             </div>
-            <div class="col s12 m6 l6" *ngIf="o">
-              <img class="responsive-image" width="430px" src="{{data.images.standard_resolution.url}}">
+            <div class="col s12 l6" *ngIf="o">
+              <img class="test" width="410px" src="{{data.images.standard_resolution.url}}">
             </div>
           </div>
         </div>
