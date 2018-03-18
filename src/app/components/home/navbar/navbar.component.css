@@ -6,6 +6,14 @@ nav {
   z-index: 1;
 }
 
+.side-nav-logo{
+  margin-left: 80px;
+}
+
 .pinned {
   position: fixed;
+}
+
+.background{
+  height: 120px;
 }

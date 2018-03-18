@@ -11,7 +11,13 @@ export class NavbarComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {
-    $('.button-collapse').sideNav();
+    $('.button-collapse').sideNav({
+      width: 400
+    });
+
+    $('.ref-link').click(function() {
+      $('.side-nav').sideNav('hide');
+    });
 
     $(document).ready(function() {
       $('.scrollspy').scrollSpy();
