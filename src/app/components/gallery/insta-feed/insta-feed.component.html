@@ -1,20 +1,19 @@
 <section class="section">
   <div class="container">
     <br>
-    <br>
-    <div class="container center-align">
-      <h2>Instagram</h2>
+    <div class="center-align">
+      <br>
+      <br>
+      <div class="center" id="ig-frame">
+        <h3 class="extra-light"><i class="fab fa-instagram"></i></h3>
+      </div>
       <br>
       <div class="row">
-        <div *ngIf="dataArray?.length > 0;">
-          <div *ngFor="let data of dataArray; let o = odd; let e = even">
-            <div class="col s12 l6" *ngIf="e">
-              <img class="test" width="410px" src="{{data.images.standard_resolution.url}}">
-            </div>
-            <div class="col s12 l6" *ngIf="o">
-              <img class="test" width="410px" src="{{data.images.standard_resolution.url}}">
-            </div>
-          </div>
+        <div id="ig-feed" class="col s12 m12 l12">
+          <p class="right">This gallery is from our Instagram page. Check back daily for updates</p>
+          <h4 class="left light">@monseiurmystere</h4>
+          <br>
+          <iframe src="https://snapwidget.com/embed/522196" class="snapwidget-widget" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:100%; "></iframe>
         </div>
       </div>
     </div>

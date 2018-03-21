@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { InstagramService } from '../../../services/instagram.service';
+import * as Instafeed from '../../../../../node_modules/instafeed.js';
 
 @Component({
   selector: 'app-insta-feed',
@@ -15,5 +16,20 @@ export class InstaFeedComponent implements OnInit {
     this.insta.getData().subscribe(data => {
       this.dataArray = data.data;
     });
+    this.initFeed(this.insta.getAccessToken(), this.insta.getUserId());
   }
+
+  private initFeed(paramToken, paramId) {
+    function initFeed() {
+      var feed = new Instafeed({
+        accessToken: paramToken,
+        get: 'user',
+        userId: paramId,
+      });
+
+      feed.run();
+    }
+  }
+
+  
 }
