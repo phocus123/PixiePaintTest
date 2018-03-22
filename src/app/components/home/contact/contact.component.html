@@ -1,7 +1,7 @@
 <section class="section">
   <div class="container">
     <div class="center">
-      <img src="../../../../assets/img/logo_stars.png" alt="">
+      <img class="responsive-img" src="../../../../assets/img/logo_stars.png" alt="">
     </div>
     <ul class="testimonial-selector">
       <li>
@@ -36,16 +36,20 @@
 </section>
 
 <div class="parallax-container">
-  <div class="parallax">
-    <img src="../../../../assets/img/showcase1.jpg">
+  <div class="parallax" *ngIf="file1">
+    <img src="{{file1.url}}">
   </div>
-  <div class="mobile-img"></div>
+</div>
+<div class="mob-img-container">
+  <div class="mobile-img" *ngIf="file1">
+    <img src="{{file1.url}}" class="responsive-img" alt="">
+  </div>
 </div>
 
 <section class="section scrollspy" id="contact">
   <div class="container">
     <div class="center">
-      <img src="../../../../assets/img/logo_stars.png" alt="">
+      <img class="responsive-img" src="../../../../assets/img/logo_stars.png" alt="">
     </div>
     <ul class="contact-selector">
       <li>
@@ -58,12 +62,13 @@
       <div class="container">
         <div class="row">
           <div class="col s12 m4 l4 center-align">
-            <a href="mailto:hello@pixiepaint.com.au" class="contact-link">
+            <a href="mailto:hello@pixiepaint.com.au" class="contact-link center">
               <i class="fas fa-envelope fa-2x bluer"></i>
             </a>
             <br>
             <h5 class="pinker heading">Email</h5>
-            <p class="flow-text">hello@pixiepaint<br>.com.au</p>
+            <p class="flow-text">hello@pixiepaint
+              <br>.com.au</p>
           </div>
           <div class="col s12 m4 l4 center-align">
             <i class="fas fa-phone fa-2x bluer"></i>
@@ -86,10 +91,14 @@
 </section>
 
 <div class="parallax-container">
-  <div class="parallax">
-    <img src="../../../../assets/img/showcase3.jpg">
+  <div class="parallax" *ngIf="file2">
+    <img src="{{file2.url}}">
   </div>
-  <div class="mobile-img2"></div>
+</div>
+<div class="mob-img-container">
+  <div class="mobile-img" *ngIf="file2">
+    <img src="{{file2.url}}" class="responsive-img" alt="">
+  </div>
 </div>
 
 <div class="section white">
@@ -97,7 +106,7 @@
     <section class="section scrollspy" id="contactForm">
       <div class="container">
         <div class="center">
-          <img src="../../../../assets/img/logo_stars.png" alt="">
+          <img class="responsive-img" src="../../../../assets/img/logo_stars.png" alt="">
         </div>
         <form #messageForm="ngForm" (ngSubmit)="onSubmit(messageForm)">
           <p class="center-align heading pinker">How can we make your event magical?</p>
@@ -147,9 +156,12 @@
 </div>
 
 <div class="parallax-container">
-  <div class="parallax">
-    <img src="../../../../assets/img/testimonial1.jpg">
+  <div class="parallax" *ngIf="file3">
+    <img src="{{file3.url}}">
   </div>
-  <div class="mobile-img3">
+</div>
+<div class="mob-img-container">
+  <div class="mobile-img" *ngIf="file3">
+    <img src="{{file3.url}}" class="responsive-img" alt="">
   </div>
 </div>

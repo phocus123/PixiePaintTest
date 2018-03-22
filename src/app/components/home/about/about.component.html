@@ -3,7 +3,7 @@
     <div class="row container">
       <div class="col s12">
         <div class="center">
-          <img src="../../../../assets/img/logo_stars.png" alt="">
+          <img class="responsive-img" src="../../../../assets/img/logo_stars.png" alt="">
         </div>
         <ul class="about-selector">
           <li>
@@ -24,11 +24,13 @@
     </div>
   </div>
   <div class="parallax-container">
-    <div class="parallax parallax-img">
-      <img id="img1" src="../../../../assets/img/showcase2.jpg">
+    <div class="parallax parallax-img" *ngIf="file">
+      <img src="{{file.url}}">
     </div>
-    <div class="mobile-img">
-
+  </div>
+  <div class="mob-img-container">
+    <div class="mobile-img" *ngIf="file">
+      <img src="{{file.url}}" class="responsive-img" alt="">
     </div>
   </div>
 </section>

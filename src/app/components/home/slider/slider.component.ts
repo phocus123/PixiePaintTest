@@ -1,10 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Observable } from 'rxjs/observable';
-import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
-import { FileUpload } from '../../../models/FileUpload';
-import { UploadFileService } from '../../../services/upload-file.service';
-
 declare let $: any;
 
 @Component({
@@ -13,26 +8,11 @@ declare let $: any;
   styleUrls: ['./slider.component.css']
 })
 export class SliderComponent implements OnInit {
-  files: FileUpload[];
-
-  constructor(private service: UploadFileService) {}
+  constructor() {}
 
   ngOnInit() {
-    this.service.getImages().subscribe(files => (this.files = files));
-
-    $(document).ready(function() {
-      setTimeout(initiateSlider, 3000);
-    });
-
-    function initiateSlider() {
-      $('.slider').slider({
-        indicators: false,
-        height: $(window).height()
-      });
-
-      $('.main-loader').toggleClass();
-      $('.loader-container').toggleClass();
-      $('.preloader-wrapper').toggleClass();
-    }
+    // $('.main-loader').toggleClass();
+    // $('.loader-container').toggleClass();
+    // $('.preloader-wrapper').toggleClass();
   }
 }

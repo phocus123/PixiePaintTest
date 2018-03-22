@@ -40,7 +40,6 @@ import { UploadFileService } from './services/upload-file.service';
 import { AuthService } from './services/auth.service';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { UploadMessageService } from './services/upload-message.service';
-import { InstagramService } from './services/instagram.service';
 
 @NgModule({
   declarations: [
@@ -78,8 +77,7 @@ import { InstagramService } from './services/instagram.service';
     UploadMessageService,
     UploadFileService,
     AuthService,
-    UploadMessageService,
-    InstagramService
+    UploadMessageService
   ],
   bootstrap: [AppComponent]
 })

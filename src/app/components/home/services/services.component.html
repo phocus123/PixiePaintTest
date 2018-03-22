@@ -1,6 +1,6 @@
-<div id="services" class="section white">
+<section id="services" class="section white">
   <div class="center">
-    <img src="../../../../assets/img/logo_stars.png" alt="">
+    <img class="responsive-img" src="../../../../assets/img/logo_stars.png" alt="">
   </div>
   <ul class="service-selector">
     <li>
@@ -90,12 +90,14 @@
       </div>
     </div>
   </div>
-</div>
+</section>
 <div class="parallax-container">
-  <div class="parallax">
-    <img src="../../../../assets/img/testimonial2.jpg">
+  <div class="parallax parallax-img" *ngIf="file">
+    <img src="{{file.url}}">
   </div>
-  <div class="mobile-img">
-
+</div>
+<div class="mob-img-container">
+  <div class="mobile-img" *ngIf="file">
+    <img src="{{file.url}}" class="responsive-img" alt="">
   </div>
 </div>

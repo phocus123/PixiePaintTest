@@ -5,7 +5,26 @@
         <span class="card-title center">Current Images</span>
         <div *ngFor="let file of fileUploads">
           <div class="card-content">
-            <details-upload [fileUpload]='file'></details-upload>
+            <div *ngIf="file.name == 'showcase1.jpg'">
+              <h5>Showcase 1</h5>
+              <details-upload [fileUpload]='file'></details-upload>
+            </div>
+            <div *ngIf="file.name == 'showcase2.jpg'">
+              <h5>Showcase 2</h5>
+              <details-upload [fileUpload]='file'></details-upload>
+            </div>
+            <div *ngIf="file.name == 'showcase3.jpg'">
+              <h5>Showcase 3</h5>
+              <details-upload [fileUpload]='file'></details-upload>
+            </div>
+            <div *ngIf="file.name == 'showcase4.jpg'">
+              <h5>Showcase 4</h5>
+              <details-upload [fileUpload]='file'></details-upload>
+            </div>
+            <div *ngIf="file.name == 'showcase5.jpg'">
+              <h5>Showcase 5</h5>
+              <details-upload [fileUpload]='file'></details-upload>
+            </div>
           </div>
         </div>
       </div>

@@ -1,14 +1,15 @@
 import { Injectable } from '@angular/core';
 import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
 import { Observable } from 'rxjs/observable';
-import * as firebase from 'firebase';
-
 import { FileUpload } from '../models/FileUpload';
+
+import * as firebase from 'firebase';
+declare let Materialize;
 
 @Injectable()
 export class UploadFileService {
-  private imagePath = '/images';
   files: Observable<FileUpload[]>;
+  imagePath = '/images';
 
   constructor(private db: AngularFireDatabase) {}
 
@@ -31,12 +32,14 @@ export class UploadFileService {
       error => {
         // fail
         console.log(error);
+        Materialize.toast(error, 4000, 'red');
       },
       () => {
         // success
         fileUpload.url = uploadTask.snapshot.downloadURL;
         fileUpload.name = fileUpload.file.name;
         this.saveFileData(fileUpload);
+        Materialize.toast('File uploaded', 4000, 'green');
       }
     );
   }
@@ -48,7 +51,7 @@ export class UploadFileService {
 
   /* Getting the List of Images for the File Uploads */
   getFileUploads(): AngularFireList<FileUpload> {
-    return this.db.list(this.imagePath);
+    return this.db.list(this.imagePath, ref => ref.orderByChild('name'));
   }
 
   /* Getting the Images from the Server */
@@ -59,21 +62,21 @@ export class UploadFileService {
 
   /* Removing the Image Storage Bucket */
   deleteFileUpload(fileUpload: FileUpload) {
-    this.deleteFileDatabase(fileUpload.key)
+    this.deleteFileDatabase(fileUpload.key, this.imagePath)
       .then(() => {
-        this.deleteFileStorage(fileUpload.name);
+        this.deleteFileStorage(fileUpload.name, this.imagePath);
       })
       .catch(error => console.log(error));
   }
 
   /* Deleting an Image from the List */
-  private deleteFileDatabase(key: string) {
-    return this.db.list(`${this.imagePath}/`).remove(key);
+  private deleteFileDatabase(key: string, imagePath: string) {
+    return this.db.list(`${imagePath}/`).remove(key);
   }
 
   /* Removing the Storage Location. */
-  private deleteFileStorage(name: string) {
+  private deleteFileStorage(name: string, imagePath: string) {
     const storageRef = firebase.storage().ref();
-    storageRef.child(`${this.imagePath}/${name}`).delete();
+    storageRef.child(`${imagePath}/${name}`).delete();
   }
 }

@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { UploadFileService } from '../../../services/upload-file.service';
 import { FileUpload } from '../../../models/FileUpload';
+
+declare let Materialize;
 
 @Component({
   selector: 'form-upload',
@@ -11,9 +12,10 @@ import { FileUpload } from '../../../models/FileUpload';
 export class FormUploadComponent implements OnInit {
   selectedFiles: FileList;
   currentFileUpload: FileUpload;
-  captionTitle: string;
-  captionBody: string;
+  caption: string;
   progress: { percentage: number } = { percentage: 0 };
+
+  @ViewChild('uploadForm') form: any;
 
   constructor(private uploadService: UploadFileService) {}
 
@@ -34,8 +36,8 @@ export class FormUploadComponent implements OnInit {
     this.selectedFiles = undefined;
 
     this.currentFileUpload = new FileUpload(file);
-    this.currentFileUpload.captionTitle = this.captionTitle;
-    this.currentFileUpload.captionBody = this.captionBody;
+    this.currentFileUpload.caption = this.caption;
     this.uploadService.pushFileToStorage(this.currentFileUpload, this.progress);
+    this.form.reset();
   }
 }
