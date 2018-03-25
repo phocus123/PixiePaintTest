@@ -38,3 +38,10 @@
 .bluer {
   color: #309aba;
 }
+
+.parallax-caption {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-right: 10px;
+}

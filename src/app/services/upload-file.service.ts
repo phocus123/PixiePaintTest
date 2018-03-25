@@ -62,21 +62,21 @@ export class UploadFileService {
 
   /* Removing the Image Storage Bucket */
   deleteFileUpload(fileUpload: FileUpload) {
-    this.deleteFileDatabase(fileUpload.key, this.imagePath)
+    this.deleteFileDatabase(fileUpload.key)
       .then(() => {
-        this.deleteFileStorage(fileUpload.name, this.imagePath);
+        this.deleteFileStorage(fileUpload.name);
       })
       .catch(error => console.log(error));
   }
 
   /* Deleting an Image from the List */
-  private deleteFileDatabase(key: string, imagePath: string) {
-    return this.db.list(`${imagePath}/`).remove(key);
+  private deleteFileDatabase(key: string) {
+    return this.db.list(`${this.imagePath}/`).remove(key);
   }
 
   /* Removing the Storage Location. */
-  private deleteFileStorage(name: string, imagePath: string) {
+  private deleteFileStorage(name: string) {
     const storageRef = firebase.storage().ref();
-    storageRef.child(`${imagePath}/${name}`).delete();
+    storageRef.child(`${this.imagePath}/${name}`).delete();
   }
 }

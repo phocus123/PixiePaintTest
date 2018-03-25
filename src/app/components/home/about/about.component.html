@@ -27,6 +27,9 @@
     <div class="parallax parallax-img" *ngIf="file">
       <img src="{{file.url}}">
     </div>
+    <div class="parallax-caption" *ngIf="file">
+      <p class="white-text shadow">{{file.caption}}</p>
+    </div>
   </div>
   <div class="mob-img-container">
     <div class="mobile-img" *ngIf="file">
