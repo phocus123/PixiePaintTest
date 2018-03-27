@@ -1,15 +1,15 @@
-<div id="home" class="scrollspy main-header">
+<div id="home" class="scrollspy main-header" (window:resize)="onResize()">
   <div class="primary-overlay">
     <div class="showcase container white-text center-align">
       <img class="responsive-img" src="/assets/img/logo_stars.png" alt="">
       <a href="https://www.instagram.com/pixiepaintperth/?hl=en" title="check out our instagram">
-        <h2 class="pixie-pink">@pixiepaintperth</h2>
+        <h3 class="pixie-pink">@pixiepaintperth</h3>
       </a>
       <p class="center flow-text">This gallery is from our Instagram page. Check back daily for updates</p>
     </div>
   </div>
 </div>
-<div class="container center-align">
+<div id="ig-feed-container" class="container center-align">
   <div class="ig-feed">
     <iframe src="//lightwidget.com/widgets/8c0bb1af2e775c53a4b298fd9e731106.html" scrolling="no" allowtransparency="true" class="lightwidget-widget"
       style="width: 100%; border: 0; overflow: hidden;"></iframe>

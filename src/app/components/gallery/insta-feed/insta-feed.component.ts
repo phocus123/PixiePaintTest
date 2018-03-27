@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+declare let $;
+
 @Component({
   selector: 'app-insta-feed',
   templateUrl: './insta-feed.component.html',
@@ -8,5 +10,32 @@ import { Component, OnInit } from '@angular/core';
 export class InstaFeedComponent implements OnInit {
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    $(document).ready(function() {
+      if ($(window).width() >= 768) {
+        $('#ig-feed-container').addClass('container');
+        $('.ig-feed').css({ padding: '36px' });
+      } else {
+        $('#ig-feed-container').removeClass('container');
+        $('.ig-feed').css({ padding: '0px' });
+      }
+    });
+  }
+
+  onResize() {
+    if ($(window).width() <= 768) {
+      $('#ig-feed-container').removeClass('container');
+      $('.ig-feed').css({ padding: '0px' });
+    } else {
+      $('#ig-feed-container').addClass('container');
+      $('.ig-feed').css({ padding: '36px' });
+    }
+  }
+
+  // private changeDivSize() {
+  //   if ($(window).width() <= 768) {
+  //     $('#ig-feed-container').removeClass('container');
+  //     console.log('test');
+  //   }
+  // }
 }
