@@ -12,7 +12,7 @@ export class InstaFeedComponent implements OnInit {
 
   ngOnInit() {
     $(document).ready(function() {
-      if ($(window).width() >= 768) {
+      if ($(window).width() >= 1080) {
         $('#ig-feed-container').addClass('container');
         $('.ig-feed').css({ padding: '36px' });
       } else {
@@ -23,7 +23,7 @@ export class InstaFeedComponent implements OnInit {
   }
 
   onResize() {
-    if ($(window).width() <= 768) {
+    if ($(window).width() <= 1080) {
       $('#ig-feed-container').removeClass('container');
       $('.ig-feed').css({ padding: '0px' });
     } else {
@@ -31,11 +31,4 @@ export class InstaFeedComponent implements OnInit {
       $('.ig-feed').css({ padding: '36px' });
     }
   }
-
-  // private changeDivSize() {
-  //   if ($(window).width() <= 768) {
-  //     $('#ig-feed-container').removeClass('container');
-  //     console.log('test');
-  //   }
-  // }
 }

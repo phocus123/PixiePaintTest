@@ -1,4 +1,4 @@
-<footer class="page-footer pixie-yellow-bg">
+<footer class="page-footer pixie-yellow-bg" (window:resize)="onResize()">
   <div class="container">
     <div class="row">
       <div class="center-align">
@@ -46,10 +46,10 @@
         <div class="col s12 m6 l6 copyright">
           <p> © 2018 Pixie Paint</p>
         </div>
-        <div class="col s12 m6 l6 center-align ">
-          <p class="light right ">Website by&nbsp;
-            <a href="https://www.linkedin.com/in/ashleigh-clark-956240123/ " class="black-text right ">Ashleigh Clark</a>
-            <a href="https://www.linkedin.com/in/markschafers " class="black-text right ">Mark Schafers &&nbsp;</a>
+        <div id="footer-container" class="col s12 m6 l6 center-align right">
+          <p class="light">Website by
+            <a href="{{ linkedIn_M }}" class="light black-text">Mark Schafers &</a>
+            <a href="{{ linkedIn_A }}" class="light black-text">Ashleigh Clark</a>
           </p>
         </div>
       </div>
