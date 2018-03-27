@@ -12,7 +12,12 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit() {
     $('.button-collapse').sideNav({
-      width: 400
+      onOpen: function(el) {
+        $('nav').hide();
+      },
+      onClose: function(el) {
+        $('nav').show();
+      }
     });
 
     $('.ref-link').click(function() {

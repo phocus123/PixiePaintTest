@@ -5,7 +5,7 @@
     </div>
     <ul class="testimonial-selector">
       <li>
-        <h2 class="center purple-text darken-4">Testimonials</h2>
+        <h2 class="center pixie-pink">Testimonials</h2>
         <br>
       </li>
     </ul>
@@ -53,7 +53,7 @@
     </div>
     <ul class="contact-selector">
       <li>
-        <h2 class="center purple-text darken-4">Contact Us</h2>
+        <h2 class="center pixie-pink">Contact Us</h2>
         <br>
       </li>
     </ul>
@@ -63,25 +63,24 @@
         <div class="row">
           <div class="col s12 m4 l4 center-align">
             <a href="mailto:hello@pixiepaint.com.au" class="contact-link center">
-              <i class="fas fa-envelope fa-2x bluer"></i>
+              <i class="fas fa-envelope fa-2x pixie-blue"></i>
             </a>
             <br>
-            <h5 class="pinker heading">Email</h5>
-            <p class="flow-text">hello@pixiepaint
-              <br>.com.au</p>
+            <h5 class="pixie-purple heading">Email</h5>
+            <p class="flow-text">hello@pixiepaint.com.au</p>
           </div>
           <div class="col s12 m4 l4 center-align">
-            <i class="fas fa-phone fa-2x bluer"></i>
+            <i class="fas fa-phone fa-2x pixie-blue"></i>
             <br>
-            <h5 class="pinker heading">Telephone</h5>
+            <h5 class="pixie-purple heading">Telephone</h5>
             <p class="flow-text">0438 940 723</p>
           </div>
           <div class="col s12 m4 l4 center-align">
             <a href="#contactForm" class="contact-link">
-              <i class="fas fa-comment-alt fa-2x bluer"></i>
+              <i class="fas fa-comment-alt fa-2x pixie-blue"></i>
             </a>
             <br>
-            <h5 class="pinker heading">Direct Message</h5>
+            <h5 class="pixie-purple heading">Direct Message</h5>
             <p class="flow-text">see below</p>
           </div>
         </div>
@@ -109,42 +108,42 @@
           <img class="responsive-img" src="../../../../assets/img/logo_stars.png" alt="">
         </div>
         <form #messageForm="ngForm" (ngSubmit)="onSubmit(messageForm)">
-          <p class="center-align heading pinker">How can we make your event magical?</p>
+          <p class="center-align heading pixie-pink">How can we make your event magical?</p>
           <br>
           <div class="row">
             <div class="input-field col s12 m6 l6">
-              <i class="material-icons prefix bluer">account_circle</i>
+              <i class="material-icons prefix pixie-blue">account_circle</i>
               <input name="firstName" type="text" class="validate" [(ngModel)]="firstName" required>
-              <label for="firstName" data-error="First name required" data-success="Right">First Name</label>
+              <label for="firstName" data-error="First name required" data-success="Valid">First Name</label>
             </div>
             <div class="input-field col s12 m6 l6">
-              <i class="material-icons prefix bluer">account_circle</i>
+              <i class="material-icons prefix pixie-blue">account_circle</i>
               <input name="lastName" type="text" class="validate" [(ngModel)]="lastName" required>
-              <label for="lastName" data-error="Last name required" data-success="Right">Last Name</label>
+              <label for="lastName" data-error="Last name required" data-success="Valid">Last Name</label>
             </div>
           </div>
           <div class="row">
             <div class="input-field col s12 m6 l6">
-              <i class="material-icons prefix bluer">email</i>
+              <i class="material-icons prefix pixie-blue">email</i>
               <input type="email" name="email" class="validate" [(ngModel)]="email" required>
-              <label for="email" data-error="Valid email address required" data-success="Right">Email</label>
+              <label for="email" data-error="Valid email address required" data-success="Valid">Email</label>
             </div>
             <div class="input-field col s12 m6 l6">
-              <i class="material-icons prefix bluer">phone</i>
-              <input type="text" name="telephone" class="validates" [(ngModel)]="telephone" required>
-              <label for="telephone" data-error="Telephone required" data-success="Right">Phone Number</label>
+              <i class="material-icons prefix pixie-blue">phone</i>
+              <input type="text" name="telephone" class="validate" [(ngModel)]="telephone" required>
+              <label for="telephone" data-error="Telephone required" data-success="Valid">Phone Number</label>
             </div>
           </div>
           <div class="row">
             <div class="input-field col s12">
-              <i class="material-icons prefix bluer">message</i>
-              <textarea class="materialize-textarea" name="messageContent" cols="30" rows="10" [(ngModel)]="messageContent" required></textarea>
-              <label for="messageContent" data-error="Message required" data-success="Right">Message</label>
+              <i class="material-icons prefix pixie-blue">message</i>
+              <textarea class="materialize-textarea validate" name="messageContent" cols="30" rows="10" [(ngModel)]="messageContent" required></textarea>
+              <label for="messageContent" data-error="Message required" data-success="Valid">Message</label>
             </div>
           </div>
           <div class="row">
             <div class="input-field col s12 m12 l12 center">
-              <button [disabled]="!messageForm.form.valid" class="btn light-blue darken-1 waves-effect waves-light" type="submit">Submit
+              <button [disabled]="!messageForm.form.valid" class="btn pixie-blue-bg waves-effect waves-light" type="submit">Submit
                 <i class="material-icons right">send</i>
               </button>
             </div>

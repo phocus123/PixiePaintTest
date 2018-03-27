@@ -6,10 +6,6 @@
   opacity: 0;
 }
 
-.italic {
-  font-style: italic;
-}
-
 .contact-link {
   text-decoration: none;
   color: inherit;

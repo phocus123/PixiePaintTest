@@ -1,0 +1,34 @@
+section {
+  background: linear-gradient(
+    to right,
+    rgba(183, 29, 121, 0.2),
+    rgba(255, 214, 33, 0.2)
+  );
+  background: -webkit-linear-gradient(
+    to right,
+    rgba(183, 29, 121, 0.2),
+    rgba(255, 214, 33, 0.2)
+  );
+  background: -moz-linear-gradient(
+    to right,
+    rgba(183, 29, 121, 0.2),
+    rgba(255, 214, 33, 0.2)
+  );
+
+  height: 100vh;
+  width: 100%;
+}
+
+.custom {
+  padding-top: 160px;
+}
+
+.pixie-yellow {
+  background-color: #ffca00 !important;
+}
+
+@media only screen and (max-width: 400px) {
+  .custom {
+    padding-top: 50px;
+  }
+}

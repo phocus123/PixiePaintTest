@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-declare let $;
 
 @Component({
   selector: 'app-insta-feed',

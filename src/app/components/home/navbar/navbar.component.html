@@ -1,5 +1,5 @@
 <div>
-  <nav class="pinned">
+  <nav class="pinned ">
     <div class="container">
       <div class="nav-wrapper">
         <a href="" class="brand-logo right light black-text">
@@ -10,6 +10,10 @@
         </a>
         <ul class="left hide-on-med-and-down">
           <li>
+            <a routerLink="" routerLinkActive="hide" [routerLinkActiveOptions]="{exact:
+              true}" class="light">Home</a>
+          </li>
+          <li>
             <a href="#about" class="light">About</a>
           </li>
           <li>
@@ -19,7 +23,7 @@
             <a href="#contact" class="light">Contact</a>
           </li>
           <li>
-            <a routerLink="gallery" class="light">Gallery</a>
+            <a routerLink="/gallery" routerLinkActive="hide" class="light">Gallery</a>
           </li>
         </ul>
       </div>
@@ -27,38 +31,23 @@
   </nav>
 </div>
 <ul class="side-nav" id="mobile-nav">
+  <div class="container center">
+    <img src="/assets/img/logo_nav.png" alt="logo">
+  </div>
   <li>
-    <div class="user-view">
-      <div class="background">
-        <img src="/assets/img/side_nav.jpg" alt="sidenav-background">
-      </div>
-      <a href="/" class="side-nav-logo">
-        <img src="/assets/img/logo_nav.png" alt="logo">
-      </a>
-    </div>
+    <a routerLink="" routerLinkActive="hide" [routerLinkActiveOptions]="{exact:
+        true}" class="light white-text ref-link">Home</a>
   </li>
   <li>
-    <a class="ref-link" href="/">Home</a>
+    <a class="light white-text ref-link" href="#about">About</a>
   </li>
   <li>
-    <div class="divider"></div>
+    <a class="light white-text ref-link" href="#services">Services</a>
   </li>
   <li>
-    <a class="subheader">Who Are We?</a>
+    <a class="light white-text ref-link" href="#contact">Contact</a>
   </li>
   <li>
-    <a class="ref-link" href="#home">About Us</a>
-  </li>
-  <li>
-    <a class="ref-link" href="#services">Our Services</a>
-  </li>
-  <li>
-    <a class="ref-link" href="#contact">Contact Us</a>
-  </li>
-  <li>
-    <div class="divider"></div>
-  </li>
-  <li>
-    <a class="ref-link" routerLink="gallery">Gallery</a>
+    <a class="light white-text ref-link" routerLink="/gallery" routerLinkActive="hide">Gallery</a>
   </li>
 </ul>

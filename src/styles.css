@@ -21,8 +21,28 @@
   text-shadow: 1px 1px 5px #000;
 }
 
-.pinker {
+.italic {
+  font-style: italic;
+}
+
+.pixie-pink {
   color: #ff00ff;
+}
+
+.pixie-purple {
+  color: #9933ff;
+}
+
+.pixie-blue {
+  color: #039be5;
+}
+
+.pixie-blue-bg {
+  background-color: #039be5 !important;
+}
+
+.pixie-yellow-bg {
+  background-color: #ffca00 !important;
 }
 
 .footer-links {
@@ -30,18 +50,13 @@
   margin: 5px;
 }
 
-.caption-container {
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
-
-.bluer {
-  color: #309aba;
-}
-
 .parallax-caption {
   position: absolute;
   bottom: 0;
   right: 0;
   margin-right: 10px;
+}
+
+.hide {
+  display: none;
 }

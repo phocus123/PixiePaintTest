@@ -20,12 +20,12 @@ exports.sendContactMessage = functions.database
     const val = snapshot.val();
 
     const mailOptions = {
-      to: 'markschafers123@gmail.com',
+      to: 'hello@pixiepaint.com.au',
       subject: `Enquiry from ${val.email}`,
       html: val.html
     };
 
     return mailTransport.sendMail(mailOptions).then(() => {
-      return console.log('Mail sent to: markschafers123@gmail.com');
+      return console.log('hello@pixiepaint.com.au');
     });
   });
