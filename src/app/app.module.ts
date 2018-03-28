@@ -11,7 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { AboutComponent } from './components/home/about/about.component';
 import { ServicesComponent } from './components/home/services/services.component';
-import { SliderComponent } from './components/home/slider/slider.component';
+import { ShowcaseComponent } from './components/home/showcase/showcase.component';
 import { ContactComponent } from './components/home/contact/contact.component';
 import { FooterComponent } from './components/home/footer/footer.component';
 import { NavbarComponent } from './components/home/navbar/navbar.component';
@@ -46,7 +46,7 @@ import { UploadMessageService } from './services/upload-message.service';
     AppComponent,
     AboutComponent,
     ServicesComponent,
-    SliderComponent,
+    ShowcaseComponent,
     ContactComponent,
     FooterComponent,
     NavbarComponent,

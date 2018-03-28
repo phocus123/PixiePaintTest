@@ -33,15 +33,15 @@
 }
 
 .showcase {
-  padding-top: 150px;
+  padding-top: 240px;
 }
 
 .bigger-text {
   font-size: 4rem;
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 420px) {
   .showcase {
-    padding-top: 50px;
+    padding-top: 120px;
   }
 }

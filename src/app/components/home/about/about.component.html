@@ -24,7 +24,7 @@
     </div>
   </div>
   <div class="parallax-container">
-    <div class="parallax parallax-img" *ngIf="file">
+    <div class="parallax" *ngIf="file">
       <img src="{{file.url}}">
     </div>
     <div class="parallax-caption" *ngIf="file">
@@ -34,6 +34,9 @@
   <div class="mob-img-container">
     <div class="mobile-img" *ngIf="file">
       <img src="{{file.url}}" class="responsive-img" alt="">
+    </div>
+    <div class="parallax-caption" *ngIf="file">
+      <p class="white-text shadow italic">{{file.caption}}</p>
     </div>
   </div>
 </section>
