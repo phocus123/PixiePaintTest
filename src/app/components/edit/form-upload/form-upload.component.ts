@@ -16,6 +16,8 @@ export class FormUploadComponent implements OnInit {
   progress: { percentage: number } = { percentage: 0 };
 
   @ViewChild('uploadForm') form: any;
+  @ViewChild('inputFile') formFile: any;
+  @ViewChild('inputFileName') formFileName: any;
 
   constructor(private uploadService: UploadFileService) {}
 
@@ -38,6 +40,12 @@ export class FormUploadComponent implements OnInit {
     this.currentFileUpload = new FileUpload(file);
     this.currentFileUpload.caption = this.caption;
     this.uploadService.pushFileToStorage(this.currentFileUpload, this.progress);
+    this.resetForm();
+  }
+
+  resetForm() {
     this.form.reset();
+    this.formFile.nativeElement.value = '';
+    this.formFileName.nativeElement.value = '';
   }
 }

@@ -17,11 +17,18 @@
               </div>
             </div>
             <div class="row">
+              <div class="col s12 center file-field input-field">
+                <div class="btn">
+                  <span>Browse</span>
+                  <input #inputFile type="file" (change)="selectFile($event)">
+                </div>
+                <div class="file-path-wrapper">
+                  <input #inputFileName type="text" name="fileName" class="file-path validate" />
+                </div>
+              </div>
               <div class="col s12 center">
-                <label class="btn">
-                  <input type="file" (change)="selectFile($event)">
-                </label>
-                <button class="btn" [disabled]="!selectedFiles || !uploadForm.form.valid">Upload</button>
+                <button class="btn center" type="submit" [disabled]="!selectedFiles || !uploadForm.form.valid">Upload</button>
+                <button class="btn center" type="button" (click)="resetForm()">Cancel</button>
               </div>
             </div>
           </form>

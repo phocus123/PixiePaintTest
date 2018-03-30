@@ -33,6 +33,52 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     $(document).ready(function() {
+      let user_agent = window.navigator.userAgent;
+      let isTrident = user_agent.search('Trident/');
+      let usingIE: boolean;
+
+      if (isTrident != -1) {
+        usingIE = true;
+      } else {
+        usingIE = false;
+      }
+
+      if (usingIE) {
+        alert(
+          'Please be advised that this website is best viewed using Chrome or Firefox browsers.'
+        );
+        $('.parallax-container').hide();
+        $('.mob-img-container').show();
+      } else {
+        if ($(window).width() >= 768) {
+          $('.mob-img-container').hide();
+          $('.parallax-container').show();
+        } else {
+          $('.parallax-container').hide();
+          $('.mob-img-container').show();
+        }
+      }
+    });
+  }
+
+  onResize() {
+    let user_agent = window.navigator.userAgent;
+    let isTrident = user_agent.search('Trident/');
+    let usingIE: boolean;
+
+    if (isTrident != -1) {
+      usingIE = true;
+    } else {
+      usingIE = false;
+    }
+
+    if (usingIE) {
+      alert(
+        'Please be advised that this website is best viewed using Chrome or Firefox browsers.'
+      );
+      $('.parallax-container').hide();
+      $('.mob-img-container').show();
+    } else {
       if ($(window).width() >= 768) {
         $('.mob-img-container').hide();
         $('.parallax-container').show();
@@ -40,16 +86,6 @@ export class HomeComponent implements OnInit {
         $('.parallax-container').hide();
         $('.mob-img-container').show();
       }
-    });
-  }
-
-  onResize() {
-    if ($(window).width() >= 768) {
-      $('.parallax-container').show();
-      $('.mob-img-container').hide();
-    } else {
-      $('.parallax-container').hide();
-      $('.mob-img-container').show();
     }
   }
 }
