@@ -7,6 +7,7 @@ import { Observable } from 'rxjs/observable';
 export class AuthGuard implements CanActivate {
   constructor(private router: Router, private afAuth: AngularFireAuth) {}
 
+  // Method for handling access to a route.
   canActivate(): Observable<boolean> {
     return this.afAuth.authState.map(auth => {
       if (!auth) {

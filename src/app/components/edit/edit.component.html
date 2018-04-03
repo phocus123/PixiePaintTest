@@ -2,7 +2,30 @@
   <app-navbar></app-navbar>
 </header>
 <main>
-  <list-upload></list-upload>
-  <form-upload></form-upload>
-  <list-messages></list-messages>
+  <list-showcase-images></list-showcase-images>
+  <div class="container">
+    <ul class="collapsible popout" data-collapsible="accordion">
+      <li>
+        <div class="collapsible-header">
+          <i class="material-icons">add</i>Upload Showcase Image</div>
+        <div class="collapsible-body">
+          <form-upload></form-upload>
+        </div>
+      </li>
+      <li>
+        <div class="collapsible-header">
+          <i class="material-icons">message</i>Message Management</div>
+        <div class="collapsible-body">
+          <list-messages></list-messages>
+        </div>
+      </li>
+      <li>
+        <div class="collapsible-header">
+          <i class="material-icons">image</i>Image Management</div>
+        <div class="collapsible-body">
+          <list-all-images></list-all-images>
+        </div>
+      </li>
+    </ul>
+  </div>
 </main>

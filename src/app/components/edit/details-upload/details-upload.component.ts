@@ -14,6 +14,7 @@ export class DetailsUploadComponent implements OnInit {
 
   ngOnInit() {}
 
+  // Local method for calling the delete file function from the upload-file service.
   deleteFileUpload(fileUpload) {
     this.uploadService.deleteFileUpload(fileUpload);
   }

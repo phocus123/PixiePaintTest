@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-
 import { UploadMessageService } from '../../../services/upload-message.service';
 import { Message } from '../../../models/Message';
 
@@ -9,10 +8,12 @@ import { Message } from '../../../models/Message';
   styleUrls: ['./list-messages.component.css']
 })
 export class ListMessagesComponent implements OnInit {
+  // Declaring local variables.
   messages: any[];
 
   constructor(private messageService: UploadMessageService) {}
 
+  // Upon initializing of this component, call the getMessages method from the upload-message service in order to populate the messages array.
   ngOnInit() {
     this.messageService
       .getMessages()

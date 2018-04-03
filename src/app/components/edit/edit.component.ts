@@ -1,16 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 
+// Declaring $ as type any for using jquery within typescript.
+declare let $;
+
 @Component({
   selector: 'app-edit',
   templateUrl: './edit.component.html',
   styleUrls: ['./edit.component.css']
 })
 export class EditComponent implements OnInit {
-  homePage: boolean;
-
   constructor() {}
 
+  // Initializing the Materialize collapsible using jquery.
   ngOnInit() {
-    this.homePage = false;
+    $('.collapsible').collapsible();
   }
 }

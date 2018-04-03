@@ -4,7 +4,9 @@ import { UploadMessageService } from '../../../services/upload-message.service';
 import { FileUpload } from '../../../models/FileUpload';
 import { UploadFileService } from '../../../services/upload-file.service';
 
+// Declaring Materialize as type any for using Materialize-css toasts within typescript.
 declare let Materialize;
+// Declaring $ as type any for using jquery within typescript.
 declare let $;
 
 @Component({
@@ -13,6 +15,7 @@ declare let $;
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent implements OnInit {
+  // Declaring local variables.
   firstName: string;
   lastName: string;
   email: string;
@@ -24,6 +27,7 @@ export class ContactComponent implements OnInit {
   file2: FileUpload;
   file3: FileUpload;
 
+  // Using ViewChild to assign a local variable to the DOM form element.
   @ViewChild('messageForm') form: any;
 
   constructor(
@@ -31,9 +35,11 @@ export class ContactComponent implements OnInit {
     private service: UploadFileService
   ) {}
 
+  // Upon the initializing of this component call the getImages method from the upload-file service, to assign the file variables.
   ngOnInit() {
     this.service.getImages().subscribe(files => {
       for (let file of files) {
+        // If statements to ensure the order of images stays consistent regardless of position in the database.
         if (file.name == 'showcase3.jpg') {
           this.file1 = file;
         }
@@ -44,13 +50,11 @@ export class ContactComponent implements OnInit {
           this.file3 = file;
         }
       }
-    });
-
-    setTimeout(() => {
       this.initParallax();
-    }, 2000);
+    });
   }
 
+  // Submitting the contact form details, which is then added to the Firebase database.
   onSubmit({ value }: { value: Message }) {
     value.html = `
        <div>From: ${value.firstName.concat(' ' + value.lastName)}</div>
@@ -63,9 +67,8 @@ export class ContactComponent implements OnInit {
     this.form.reset();
   }
 
+  // Initializing the Materialize parallax using jquery.
   initParallax() {
-    $(document).ready(function() {
-      $('.parallax').parallax();
-    });
+    $('.parallax').parallax();
   }
 }

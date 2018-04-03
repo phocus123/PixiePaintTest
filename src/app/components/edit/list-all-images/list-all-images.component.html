@@ -1,10 +1,10 @@
 <section class="section padding-top">
   <div class="card">
     <div class="card-content">
-      <span class="card-title center">Messages</span>
-      <div *ngFor="let message of messages">
+      <span class="card-title center">All Images</span>
+      <div *ngFor="let file of fileUploads">
         <div class="card-content black-text">
-          <details-message [messages]='message'></details-message>
+          <details-upload [fileUpload]='file'></details-upload>
         </div>
       </div>
     </div>

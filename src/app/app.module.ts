@@ -22,7 +22,7 @@ import { HomeComponent } from './components/home/home/home.component';
 import { LoginFormComponent } from './components/login/login-form/login-form.component';
 import { InstaFeedComponent } from './components/gallery/insta-feed/insta-feed.component';
 import { FormUploadComponent } from './components/edit/form-upload/form-upload.component';
-import { ListUploadComponent } from './components/edit/list-upload/list-upload.component';
+import { ListShowcaseImagesComponent } from './components/edit/list-showcase-images/list-showcase-images.component';
 import { DetailsUploadComponent } from './components/edit/details-upload/details-upload.component';
 import { ListMessagesComponent } from './components/edit/list-messages/list-messages.component';
 import { DetailsMessageComponent } from './components/edit/details-message/details-message.component';
@@ -40,6 +40,7 @@ import { UploadFileService } from './services/upload-file.service';
 import { AuthService } from './services/auth.service';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { UploadMessageService } from './services/upload-message.service';
+import { ListAllImagesComponent } from './components/edit/list-all-images/list-all-images.component';
 
 @NgModule({
   declarations: [
@@ -56,12 +57,13 @@ import { UploadMessageService } from './services/upload-message.service';
     HomeComponent,
     DetailsUploadComponent,
     FormUploadComponent,
-    ListUploadComponent,
+    ListShowcaseImagesComponent,
     LoginFormComponent,
     InstaFeedComponent,
     NotFoundComponent,
     ListMessagesComponent,
-    DetailsMessageComponent
+    DetailsMessageComponent,
+    ListAllImagesComponent
   ],
   imports: [
     BrowserModule,

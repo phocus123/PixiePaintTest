@@ -14,7 +14,8 @@ export class DetailsMessageComponent implements OnInit {
 
   ngOnInit() {}
 
-  deleteMessage(test) {
-    this.messageService.deleteMessage(test);
+  // Local method for calling the delete message function from the upload-message service.
+  deleteMessage(message) {
+    this.messageService.deleteMessage(message);
   }
 }

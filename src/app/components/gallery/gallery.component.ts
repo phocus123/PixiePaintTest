@@ -7,6 +7,7 @@ import { Meta, Title } from '@angular/platform-browser';
   styleUrls: ['./gallery.component.css']
 })
 export class GalleryComponent implements OnInit {
+  // Assigning the title and meta tags for the gallery page.
   constructor(_pageTitle: Title, _meta: Meta) {
     _pageTitle.setTitle('Pixie Paint Perth | Gallery');
     _meta.addTags([

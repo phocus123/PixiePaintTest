@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+
+// Declaring $ as type any for using jquery within typescript.
 declare let $: any;
+// Declaring Materialize as type any for using Materialize-css toasts within typescript.
 declare let Materialize: any;
 
 @Component({
@@ -11,23 +14,25 @@ export class NavbarComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {
+    // Jquery for dynamic nav bar, hide or show depending on whether the sideNav is opened or closed.
     $('.button-collapse').sideNav({
-      onOpen: function(el) {
+      onOpen: function() {
         $('nav').hide();
       },
-      onClose: function(el) {
+      onClose: function() {
         $('nav').show();
       }
     });
 
+    // Jquery for closing the sideNav when a link is clicked.
     $('.ref-link').click(function() {
       $('.side-nav').sideNav('hide');
     });
 
-    $(document).ready(function() {
-      $('.scrollspy').scrollSpy();
-    });
+    // Initializing materialize-css scrollspy.
+    $('.scrollspy').scrollSpy();
 
+    // Materialize-css scrollfire options, for displaying the relevent staggered list when the user has scrolled to the offsets position.
     const options = [
       {
         selector: '.about-selector',

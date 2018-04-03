@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+
+// Declaring $ as type any for using jquery within typescript.
 declare let $;
 
 @Component({
@@ -7,21 +9,11 @@ declare let $;
   styleUrls: ['./footer.component.css']
 })
 export class FooterComponent implements OnInit {
+  // Declaring local variables.
   linkedIn_A: string = 'https://www.linkedin.com/in/ashleigh-clark-956240123/';
   linkedIn_M: string = 'https://www.linkedin.com/in/markschafers';
 
   constructor() {}
 
-  ngOnInit() {
-    this.scrollToTop();
-  }
-
-  scrollToTop() {
-    $('#footerButton').click(function() {
-      // Animate Movement to the Top of the Page.
-      $('html body').animate({ scrollTop: 0 }, 500, 'swing');
-      // Stop Animation.
-      $('html body').stop();
-    });
-  }
+  ngOnInit() {}
 }

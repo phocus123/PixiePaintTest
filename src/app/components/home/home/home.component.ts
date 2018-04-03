@@ -16,6 +16,7 @@ export class HomeComponent implements OnInit {
     private service: UploadFileService,
     private _meta: Meta
   ) {
+    // Assigning the title and meta tags for the gallery page.
     _pageTitle.setTitle('Fun for Little Pixies | Pixie Paint Perth');
     _meta.addTags([
       {
@@ -31,37 +32,40 @@ export class HomeComponent implements OnInit {
     ]);
   }
 
+  // Upon the initializing of this component, call the queryBrowser method and then resizeParallax.
   ngOnInit() {
-    $(document).ready(function() {
-      let user_agent = window.navigator.userAgent;
-      let isTrident = user_agent.search('Trident/');
-      let usingIE: boolean;
+    var winWidth = $(window).width();
 
-      if (isTrident != -1) {
-        usingIE = true;
-      } else {
-        usingIE = false;
-      }
-
-      if (usingIE) {
-        alert(
-          'Please be advised that this website is best viewed using Chrome or Firefox browsers.'
-        );
-        $('.parallax-container').hide();
-        $('.mob-img-container').show();
-      } else {
-        if ($(window).width() >= 768) {
-          $('.mob-img-container').hide();
-          $('.parallax-container').show();
-        } else {
-          $('.parallax-container').hide();
-          $('.mob-img-container').show();
-        }
-      }
-    });
+    if (this.queryBrowser()) {
+      alert(
+        'Please be advised that this website is best viewed using Chrome or Firefox browsers.'
+      );
+      this.resizeParallax(winWidth);
+    } else {
+      this.resizeParallax(winWidth);
+    }
   }
 
+  // Upon the resizing of the window, ie. phone portrait to landscape, call the resizeParallax method.
   onResize() {
+    var winWidth = $(window).width();
+
+    this.resizeParallax(winWidth);
+  }
+
+  // Method for responsiveness of the parallax, if window width is larger than 768px then show parallax-container class and hide mob-img-container class.
+  resizeParallax(winWidth) {
+    if (winWidth >= 768) {
+      $('.mob-img-container').hide();
+      $('.parallax-container').show();
+    } else {
+      $('.parallax-container').hide();
+      $('.mob-img-container').show();
+    }
+  }
+
+  // Method for checking if user is using Internet Explorer, returns a boolean.
+  queryBrowser(): boolean {
     let user_agent = window.navigator.userAgent;
     let isTrident = user_agent.search('Trident/');
     let usingIE: boolean;
@@ -72,20 +76,6 @@ export class HomeComponent implements OnInit {
       usingIE = false;
     }
 
-    if (usingIE) {
-      alert(
-        'Please be advised that this website is best viewed using Chrome or Firefox browsers.'
-      );
-      $('.parallax-container').hide();
-      $('.mob-img-container').show();
-    } else {
-      if ($(window).width() >= 768) {
-        $('.mob-img-container').hide();
-        $('.parallax-container').show();
-      } else {
-        $('.parallax-container').hide();
-        $('.mob-img-container').show();
-      }
-    }
+    return usingIE;
   }
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+// Declaring $ as type any for using jquery within typescript.
 declare let $;
 
 @Component({
@@ -10,29 +11,28 @@ declare let $;
 export class InstaFeedComponent implements OnInit {
   constructor() {}
 
+  // Upon the initializing of this component call the resizeContainer method.
   ngOnInit() {
-    var win_width = $(window).width();
+    var winWidth = $(window).width();
 
-    $(document).ready(function() {
-      if (win_width >= 768) {
-        $('#ig-feed-container').addClass('container');
-        $('.ig-feed').css({ padding: '36px' });
-      } else {
-        $('#ig-feed-container').removeClass('container');
-        $('.ig-feed').css({ padding: '0px' });
-      }
-    });
+    this.resizeContainer(winWidth);
   }
 
+  // Upon the resizing of the window, ie. phone portrait to landscape, call the resizeContainer method.
   onResize() {
-    var win_width = $(window).width();
+    var winWidth = $(window).width();
 
-    if (win_width <= 768) {
-      $('#ig-feed-container').removeClass('container');
-      $('.ig-feed').css({ padding: '0px' });
-    } else {
+    this.resizeContainer(winWidth);
+  }
+
+  // Method for responsiveness of the instagram gallery. If window width is less than 768px then remove the container class and set padding to 0px.
+  resizeContainer(winWidth) {
+    if (winWidth >= 768) {
       $('#ig-feed-container').addClass('container');
       $('.ig-feed').css({ padding: '36px' });
+    } else {
+      $('#ig-feed-container').removeClass('container');
+      $('.ig-feed').css({ padding: '0px' });
     }
   }
 }
