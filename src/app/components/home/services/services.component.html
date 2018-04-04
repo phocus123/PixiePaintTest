@@ -92,18 +92,26 @@
   </div>
 </section>
 <div class="parallax-container">
-  <div class="parallax parallax-img" *ngIf="file">
-    <img src="{{file.url}}">
-  </div>
-  <div class="parallax-caption" *ngIf="file">
-    <p class="white-text shadow italic">{{file.caption}}</p>
+  <div *ngIf="files">
+    <div *ngFor="let file of files">
+      <div class="parallax" *ngIf="file.name == 'showcase2.jpg'">
+        <img src="{{file.url}}">
+      </div>
+      <div class="parallax-caption" *ngIf="file.name == 'showcase2.jpg'">
+        <p class="white-text shadow italic">{{file.caption}}</p>
+      </div>
+    </div>
   </div>
 </div>
 <div class="mob-img-container">
-  <div class="mobile-img" *ngIf="file">
-    <img src="{{file.url}}" class="responsive-img" alt="">
-  </div>
-  <div class="parallax-caption" *ngIf="file">
-    <p class="white-text shadow italic">{{file.caption}}</p>
+  <div *ngIf="files">
+    <div *ngFor="let file of files">
+      <div class="mobile-img" *ngIf="file.name == 'showcase2.jpg'">
+        <img src="{{file.url}}" class="responsive-img" alt="">
+      </div>
+      <div class="parallax-caption" *ngIf="file.name == 'showcase2.jpg'">
+        <p class="white-text shadow italic">{{file.caption}}</p>
+      </div>
+    </div>
   </div>
 </div>

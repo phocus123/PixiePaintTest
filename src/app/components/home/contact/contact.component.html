@@ -36,19 +36,27 @@
 </section>
 
 <div class="parallax-container">
-  <div class="parallax" *ngIf="file1">
-    <img src="{{file1.url}}">
-  </div>
-  <div class="parallax-caption" *ngIf="file1">
-    <p class="white-text shadow italic">{{file1.caption}}</p>
+  <div *ngIf="files">
+    <div *ngFor="let file of files">
+      <div class="parallax" *ngIf="file.name == 'showcase3.jpg'">
+        <img src="{{file.url}}">
+      </div>
+      <div class="parallax-caption" *ngIf="file.name == 'showcase3.jpg'">
+        <p class="white-text shadow italic">{{file.caption}}</p>
+      </div>
+    </div>
   </div>
 </div>
 <div class="mob-img-container">
-  <div class="mobile-img" *ngIf="file1">
-    <img src="{{file1.url}}" class="responsive-img" alt="">
-  </div>
-  <div class="parallax-caption" *ngIf="file1">
-    <p class="white-text shadow italic">{{file1.caption}}</p>
+  <div *ngIf="files">
+    <div *ngFor="let file of files">
+      <div class="mobile-img" *ngIf="file.name == 'showcase3.jpg'">
+        <img src="{{file.url}}" class="responsive-img" alt="">
+      </div>
+      <div class="parallax-caption" *ngIf="file.name == 'showcase3.jpg'">
+        <p class="white-text shadow italic">{{file.caption}}</p>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -93,19 +101,27 @@
 </section>
 
 <div class="parallax-container">
-  <div class="parallax" *ngIf="file2">
-    <img src="{{file2.url}}">
-  </div>
-  <div class="parallax-caption" *ngIf="file2">
-    <p class="white-text shadow italic">{{file2.caption}}</p>
+  <div *ngIf="files">
+    <div *ngFor="let file of files">
+      <div class="parallax" *ngIf="file.name == 'showcase4.jpg'">
+        <img src="{{file.url}}">
+      </div>
+      <div class="parallax-caption" *ngIf="file.name == 'showcase4.jpg'">
+        <p class="white-text shadow italic">{{file.caption}}</p>
+      </div>
+    </div>
   </div>
 </div>
 <div class="mob-img-container">
-  <div class="mobile-img" *ngIf="file2">
-    <img src="{{file2.url}}" class="responsive-img" alt="">
-  </div>
-  <div class="parallax-caption" *ngIf="file2">
-    <p class="white-text shadow italic">{{file2.caption}}</p>
+  <div *ngIf="files">
+    <div *ngFor="let file of files">
+      <div class="mobile-img" *ngIf="file.name == 'showcase4.jpg'">
+        <img src="{{file.url}}" class="responsive-img" alt="">
+      </div>
+      <div class="parallax-caption" *ngIf="file.name == 'showcase4.jpg'">
+        <p class="white-text shadow italic">{{file.caption}}</p>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -164,18 +180,26 @@
 </div>
 
 <div class="parallax-container">
-  <div class="parallax" *ngIf="file3">
-    <img src="{{file3.url}}">
-  </div>
-  <div class="parallax-caption" *ngIf="file3">
-    <p class="white-text shadow italic">{{file3.caption}}</p>
+  <div *ngIf="files">
+    <div *ngFor="let file of files">
+      <div class="parallax" *ngIf="file.name == 'showcase5.jpg'">
+        <img src="{{file.url}}">
+      </div>
+      <div class="parallax-caption" *ngIf="file.name == 'showcase5.jpg'">
+        <p class="white-text shadow italic">{{file.caption}}</p>
+      </div>
+    </div>
   </div>
 </div>
 <div class="mob-img-container">
-  <div class="mobile-img" *ngIf="file3">
-    <img src="{{file3.url}}" class="responsive-img" alt="">
-  </div>
-  <div class="parallax-caption" *ngIf="file3">
-    <p class="white-text shadow italic">{{file3.caption}}</p>
+  <div *ngIf="files">
+    <div *ngFor="let file of files">
+      <div class="mobile-img" *ngIf="file.name == 'showcase5.jpg'">
+        <img src="{{file.url}}" class="responsive-img" alt="">
+      </div>
+      <div class="parallax-caption" *ngIf="file.name == 'showcase5.jpg'">
+        <p class="white-text shadow italic">{{file.caption}}</p>
+      </div>
+    </div>
   </div>
 </div>

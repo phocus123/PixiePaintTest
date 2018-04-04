@@ -8,6 +8,7 @@ import { UploadMessageService } from '../../../services/upload-message.service';
   styleUrls: ['./details-message.component.css']
 })
 export class DetailsMessageComponent implements OnInit {
+  // Declaring a local variable of type Message that is passed data from the list-messages component.
   @Input() messages: Message;
 
   constructor(private messageService: UploadMessageService) {}

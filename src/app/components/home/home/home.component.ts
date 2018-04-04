@@ -11,6 +11,8 @@ declare let $;
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  // Declaring local variables.
+  files: FileUpload[];
   constructor(
     private _pageTitle: Title,
     private service: UploadFileService,
@@ -44,6 +46,15 @@ export class HomeComponent implements OnInit {
     } else {
       this.resizeParallax(winWidth);
     }
+
+    // Call getImages from the upload-file service and populate files array then inititalize the Materialize parallax.
+    this.service.getImages().subscribe(files => {
+      this.files = files;
+    });
+
+    setTimeout(() => {
+      this.initParallax();
+    }, 2000);
   }
 
   // Upon the resizing of the window, ie. phone portrait to landscape, call the resizeParallax method.
@@ -77,5 +88,9 @@ export class HomeComponent implements OnInit {
     }
 
     return usingIE;
+  }
+
+  initParallax() {
+    $('.parallax').parallax();
   }
 }

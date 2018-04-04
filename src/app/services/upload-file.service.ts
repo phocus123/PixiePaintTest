@@ -58,8 +58,7 @@ export class UploadFileService {
 
   // Getting the list of images from the database.
   getImages(): Observable<FileUpload[]> {
-    this.files = this.db.list<FileUpload>(this.imagePath).valueChanges();
-    return this.files;
+    return this.db.list<FileUpload>(this.imagePath).valueChanges();
   }
 
   // Deleting the image from the both the storage server and the database.
