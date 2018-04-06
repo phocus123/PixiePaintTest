@@ -3,13 +3,16 @@
     <div class="center">
       <img class="responsive-img" src="../../../../assets/img/logo_stars.png" alt="">
     </div>
+    <!-- Section Header -->
     <ul class="testimonial-selector">
       <li>
         <h2 class="center pixie-pink">Testimonials</h2>
         <br>
       </li>
     </ul>
+    <!-- A Row Container for Multiple Horizontal Columns -->
     <div class="row">
+      <!-- Column 1 -->
       <div class="col s12 m4 l4 card">
         <div class="card-content">
           <p class="flow-text italic">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius exercitationem asperiores ducimus veritatis voluptate
@@ -17,6 +20,7 @@
           <p class="flow-text right-align">Author</p>
         </div>
       </div>
+      <!-- Column 2 -->
       <div class="col s12 m4 l4 card">
         <div class="card-content">
           <p class="flow-text italic">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius exercitationem asperiores ducimus veritatis voluptate
@@ -24,6 +28,7 @@
           <p class="flow-text right-align">Author</p>
         </div>
       </div>
+      <!-- Column 3 -->
       <div class="col s12 m4 l4 card">
         <div class="card-content">
           <p class="flow-text italic">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius exercitationem asperiores ducimus veritatis voluptate
@@ -34,37 +39,44 @@
     </div>
   </div>
 </section>
-
+<!-- Parallax Image Container -->
 <div class="parallax-container">
   <div *ngIf="files">
     <div *ngFor="let file of files">
+      <!-- Image -->
       <div class="parallax" *ngIf="file.name == 'showcase3.jpg'">
         <img src="{{file.url}}">
       </div>
+      <!-- Caption -->
       <div class="parallax-caption" *ngIf="file.name == 'showcase3.jpg'">
         <p class="white-text shadow italic">{{file.caption}}</p>
       </div>
     </div>
   </div>
 </div>
+<!-- Resized Image for Mobile -->
 <div class="mob-img-container">
   <div *ngIf="files">
     <div *ngFor="let file of files">
+      <!-- Image -->
       <div class="mobile-img" *ngIf="file.name == 'showcase3.jpg'">
         <img src="{{file.url}}" class="responsive-img" alt="">
       </div>
+      <!-- Caption -->
       <div class="parallax-caption" *ngIf="file.name == 'showcase3.jpg'">
         <p class="white-text shadow italic">{{file.caption}}</p>
       </div>
     </div>
   </div>
 </div>
-
+<!-- Section Seperation with Scrollspy Detection -->
 <section class="section scrollspy" id="contact">
   <div class="container">
+    <!-- Image Banner -->
     <div class="center">
       <img class="responsive-img" src="../../../../assets/img/logo_stars.png" alt="">
     </div>
+    <!-- Section Header -->
     <ul class="contact-selector">
       <li>
         <h2 class="center pixie-pink">Contact Us</h2>
@@ -72,7 +84,9 @@
       </li>
     </ul>
     <br>
+    <!-- Row to Allow Column Structure -->
     <div class="row">
+      <!-- Email -->
       <div class="col s12 m12 l4 center-align">
         <a href="mailto:hello@pixiepaint.com.au" class="contact-link center">
           <i class="fas fa-envelope fa-2x pixie-blue"></i>
@@ -80,12 +94,14 @@
         <h5 class="pixie-purple heading">Email</h5>
         <p class="flow-text truncate" title="hello@pixiepaint.com.au">hello@pixiepaint.com.au</p>
       </div>
+      <!-- Telephone -->
       <div class="col s12 m12 l4 center-align">
         <i class="fas fa-phone fa-2x pixie-blue"></i>
         <br>
         <h5 class="pixie-purple heading">Telephone</h5>
         <p class="flow-text">0438 940 723</p>
       </div>
+      <!-- Direct Message - Link to Form Below -->
       <div class="col s12 m12 l4 center-align">
         <a href="#contactForm" class="contact-link">
           <i class="fas fa-comment-alt fa-2x pixie-blue"></i>
@@ -122,23 +138,28 @@
     </div>
   </div>
 </div>
-
+<!-- Section Seperator for Contact Form -->
 <div class="section white">
   <div class="row container">
+    <!-- Section with Scrollspy Detection -->
     <section class="section scrollspy" id="contactForm">
       <div class="container">
+        <!-- Image Banner -->
         <div class="center">
           <img class="responsive-img" src="../../../../assets/img/logo_stars.png" alt="">
         </div>
+        <!-- Actual Contact Form Content -->
         <form #messageForm="ngForm" (ngSubmit)="onSubmit(messageForm)">
           <h2 class="center-align pixie-pink">How can we make your event magical?</h2>
           <br>
           <div class="row">
+            <!-- First Name -->
             <div class="input-field col s12 m6 l6">
               <i class="material-icons prefix pixie-blue">account_circle</i>
               <input name="firstName" type="text" class="validate" [(ngModel)]="firstName" required>
               <label for="firstName" data-error="First name required" data-success="Valid">First Name</label>
             </div>
+            <!-- Last Name -->
             <div class="input-field col s12 m6 l6">
               <i class="material-icons prefix pixie-blue">account_circle</i>
               <input name="lastName" type="text" class="validate" [(ngModel)]="lastName" required>
@@ -146,17 +167,20 @@
             </div>
           </div>
           <div class="row">
+            <!-- Email -->
             <div class="input-field col s12 m6 l6">
               <i class="material-icons prefix pixie-blue">email</i>
               <input type="email" name="email" class="validate" [(ngModel)]="email" required>
               <label for="email" data-error="Valid email address required" data-success="Valid">Email</label>
             </div>
+            <!-- Phone Number -->
             <div class="input-field col s12 m6 l6">
               <i class="material-icons prefix pixie-blue">phone</i>
               <input type="text" name="telephone" class="validate" [(ngModel)]="telephone" required>
               <label for="telephone" data-error="Telephone required" data-success="Valid">Phone Number</label>
             </div>
           </div>
+          <!-- Message Content -->
           <div class="row">
             <div class="input-field col s12">
               <i class="material-icons prefix pixie-blue">message</i>
@@ -165,6 +189,7 @@
             </div>
           </div>
           <div class="row">
+            <!-- Submission Button -->
             <div class="input-field col s12 m12 l12 center">
               <button [disabled]="!messageForm.form.valid" class="btn pixie-blue-bg waves-effect waves-light" type="submit">Submit
                 <i class="material-icons right">send</i>
@@ -176,25 +201,30 @@
     </section>
   </div>
 </div>
-
+<!-- Parallax Image Container -->
 <div class="parallax-container">
   <div *ngIf="files">
     <div *ngFor="let file of files">
+      <!-- Image -->
       <div class="parallax" *ngIf="file.name == 'showcase5.jpg'">
         <img src="{{file.url}}">
       </div>
+      <!-- Caption -->
       <div class="parallax-caption" *ngIf="file.name == 'showcase5.jpg'">
         <p class="white-text shadow italic">{{file.caption}}</p>
       </div>
     </div>
   </div>
 </div>
+<!-- Resized Image for Mobile -->
 <div class="mob-img-container">
   <div *ngIf="files">
     <div *ngFor="let file of files">
+      <!-- Image -->
       <div class="mobile-img" *ngIf="file.name == 'showcase5.jpg'">
         <img src="{{file.url}}" class="responsive-img" alt="">
       </div>
+      <!-- Caption -->
       <div class="parallax-caption" *ngIf="file.name == 'showcase5.jpg'">
         <p class="white-text shadow italic">{{file.caption}}</p>
       </div>
