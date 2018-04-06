@@ -1,7 +1,11 @@
+<!-- Section Seperator -->
 <section class="section padding-top">
+  <!-- Card Layout without Text Align -->
   <div class="card">
     <div class="card-content">
+      <!-- Card Title -->
       <span class="card-title center">Messages</span>
+      <!-- Card Content with Angular-Bound Loop to List Multiple Items -->
       <div *ngFor="let message of messages">
         <div class="card-content black-text">
           <details-message [messages]='message'></details-message>

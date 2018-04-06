@@ -1,5 +1,7 @@
+<!-- Container for Responsive Layout -->
 <div class="container">
   <div class="row">
+    <!-- Content for Messages -->
     <div class="col s12 m12 l12">
       <p>Key: {{messages.key}}</p>
       <p>Name: {{messages.firstName}} {{messages.lastName}}</p>
@@ -8,6 +10,7 @@
     </div>
   </div>
   <div class="row">
+    <!-- Delete Message Action -->
     <div class="col s12 m12 l12">
       <button (click)='deleteMessage(messages.key)' class="btn" style="float: right">Delete</button>
     </div>
