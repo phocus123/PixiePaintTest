@@ -1,29 +1,41 @@
+<!-- Login Partial for Login  -->
 <section class="section">
+  <!-- Container to Ensure Responsive Design with Materialize jQuery -->
   <div class="container">
     <br>
     <br>
     <div class="container center-align">
+      <!-- Aligning the Transparent Stars Logo to the Centre as a Banner -->
       <div class="center">
         <br>
         <img class="responsive-img" src="/assets/img/logo_stars.png" alt="">
       </div>
+      <!-- Page Header -->
       <h2 class="pixie-pink">Login</h2>
       <br>
+      <!-- Aligning Container for Card Layout of LoginForm -->
       <div class="container">
+        <!-- Card Layout Border Set-->
         <div class="card">
+          <!-- Card Content Boundary -->
           <div class="card-content">
+            <!-- Data Binding of Login Details -->
             <form #loginForm="ngForm" (submit)="onSubmit(loginForm)">
+              <!-- Layout Control by Width of Columns -->
               <div class="row">
+                <!-- Email Field in Login with Validation -->
                 <div class="col s12 l12 input-field">
                   <i class="mdi-communication-email prefix"></i>
                   <input type="email" name="email" [(ngModel)]="email" class="validate" required>
                   <label for="email" data-success="Right" data-error="Valid email address required">Username</label>
                 </div>
+                <!-- Password Field in Login with Validation -->
                 <div class="col s12 l12 input-field">
                   <i class="mdi-action-lock-outline prefix"></i>
                   <input type="password" name="password" [(ngModel)]="password" class="validate" required>
                   <label for="password" data-success="Right" data-error="Enter password">Password</label>
                 </div>
+                <!-- Submission Key with Access Control by Form Validation Above -->
                 <div class="col s12 l12 input-field">
                   <button [disabled]="!loginForm.form.valid" class="btn light-blue darken-1 waves-effect waves-lightx" type="submit">Submit
                     <i class="material-icons right">send</i>

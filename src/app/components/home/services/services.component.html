@@ -1,14 +1,19 @@
+<!-- Section with Scrollspy Detection -->
 <section id="services" class="section white scrollspy">
+  <!-- Image Banner -->
   <div class="center">
     <img class="responsive-img" src="../../../../assets/img/logo_stars.png" alt="">
   </div>
+  <!-- Section Header -->
   <ul class="service-selector">
     <li>
       <h2 class="center pixie-pink">Our Services</h2>
     </li>
   </ul>
   <br>
+  <!-- Content Container for Responsive Display -->
   <div class="container">
+    <!-- 3x1 Row -->
     <div class="row">
       <div class="col s12 l4">
         <div>
@@ -49,6 +54,7 @@
         </div>
       </div>
     </div>
+    <!-- 3x1 Row on New Line -->
     <div class="row ">
       <div class="col s12 l4 ">
         <div>
@@ -91,18 +97,22 @@
     </div>
   </div>
 </section>
+<!-- Parallax Image Container -->
 <div class="parallax-container">
   <div *ngIf="files">
     <div *ngFor="let file of files">
+      <!-- Image -->
       <div class="parallax" *ngIf="file.name == 'showcase2.jpg'">
         <img src="{{file.url}}">
       </div>
+      <!-- Caption -->
       <div class="parallax-caption" *ngIf="file.name == 'showcase2.jpg'">
         <p class="white-text shadow italic">{{file.caption}}</p>
       </div>
     </div>
   </div>
 </div>
+<!-- Image Resized for Mobile -->
 <div class="mob-img-container">
   <div *ngIf="files">
     <div *ngFor="let file of files">

@@ -1,15 +1,19 @@
+<!-- Section Seperation with Scrollspy -->
 <section class="section scrollspy" id="about">
   <div class="section white">
     <div class="row container">
       <div class="col s12">
+        <!-- Transparent Image Banner -->
         <div class="center">
           <img class="responsive-img" src="/assets/img/logo_stars.png" alt="">
         </div>
+        <!-- Section Header -->
         <ul class="about-selector">
           <li>
             <h2 class="center pixie-pink">About Us</h2>
           </li>
         </ul>
+        <!-- Presentation Text -->
         <p class="flow-text">Ours is a story of passionate performers - lovers of theatre, costume and all things magical! With over 10 years
           experience in delighting and entertaining little ones, we know our clients and how to show them a great time. We
           know what makes an experience fun and memorable for little ones. From humble beginnings as princesses and fairies
@@ -23,24 +27,30 @@
       </div>
     </div>
   </div>
+  <!-- Parallax Image Container -->
   <div class="parallax-container">
     <div *ngIf="files">
       <div *ngFor="let file of files">
+        <!-- Image -->
         <div class="parallax" *ngIf="file.name == 'showcase1.jpg'">
           <img src="{{file.url}}">
         </div>
+        <!-- Caption -->
         <div class="parallax-caption" *ngIf="file.name == 'showcase1.jpg'">
           <p class="white-text shadow italic">{{file.caption}}</p>
         </div>
       </div>
     </div>
   </div>
+  <!-- Resized Image for Mobile -->
   <div class="mob-img-container">
     <div *ngIf="files">
       <div *ngFor="let file of files">
+        <!-- Image -->
         <div class="mobile-img" *ngIf="file.name == 'showcase1.jpg'">
           <img src="{{file.url}}" class="responsive-img" alt="">
         </div>
+        <!-- Caption -->
         <div class="parallax-caption" *ngIf="file.name == 'showcase1.jpg'">
           <p class="white-text shadow italic">{{file.caption}}</p>
         </div>

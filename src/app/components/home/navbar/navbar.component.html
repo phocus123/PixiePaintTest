@@ -1,13 +1,19 @@
+<!-- Universal Navigation Bar Component Structure -->
 <div>
+  <!-- Navigation HTML Tag with Materialize Class for Fixed Nav -->
   <nav class="pinned ">
+    <!-- Aligning Content for Responsive Display -->
     <div class="container">
+      <!-- Navigation Bar Content -->
       <div class="nav-wrapper">
         <a href="" class="brand-logo right light black-text">
           <img src="../../../assets/img/logo_nav.png" alt="">
         </a>
+        <!-- Hamburger Button for Mobile Devices -->
         <a href="" data-activates="mobile-nav" class="button-collapse">
           <i class="material-icons">menu</i>
         </a>
+        <!-- Links that Hide on Mobile Display -->
         <ul class="left hide-on-med-and-down">
           <li>
             <a routerLink="" routerLinkActive="hide" [routerLinkActiveOptions]="{exact:
@@ -30,7 +36,9 @@
     </div>
   </nav>
 </div>
+<!-- Slide-out Navigation Bar for Mobile -->
 <ul class="side-nav" id="mobile-nav">
+  <!-- Branding on Top of Navigation Slide-out -->
   <div class="container center">
     <img src="/assets/img/logo_nav.png" alt="logo">
   </div>

@@ -1,12 +1,18 @@
+<!-- Home Page for Binding of other Components -->
+<!-- onResize to activate state in TypeScript files -->
 <header (window:resize)="onResize()">
+  <!-- Universal Navigation Bar -->
   <app-navbar></app-navbar>
+  <!-- Image Showcase Banner -->
   <app-showcase></app-showcase>
 </header>
 <main>
+  <!-- Sections with References to File Download Sections from Data Storage -->
   <app-about [files]="files"></app-about>
   <app-services [files]="files"></app-services>
   <app-contact [files]="files"></app-contact>
 </main>
 <footer>
+  <!-- Footer Component -->
   <app-footer></app-footer>
 </footer>
