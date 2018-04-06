@@ -10,7 +10,6 @@ declare let Materialize;
 @Injectable()
 export class UploadFileService {
   // Declaring local variables.
-  files: Observable<FileUpload[]>;
   imagePath = '/images';
 
   constructor(private db: AngularFireDatabase) {}
@@ -57,8 +56,8 @@ export class UploadFileService {
   }
 
   // Getting the list of images from the database.
-  getImages(): Observable<FileUpload[]> {
-    return this.db.list<FileUpload>(this.imagePath).valueChanges();
+  getImages(): AngularFireList<FileUpload> {
+    return this.db.list(this.imagePath);
   }
 
   // Deleting the image from the both the storage server and the database.

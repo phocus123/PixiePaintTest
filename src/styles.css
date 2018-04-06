@@ -4,6 +4,10 @@ nav {
   height: 70px !important;
 }
 
+.slider .indicators .indicator-item.active {
+  background-color: #039be5 !important;
+}
+
 .light {
   font-weight: 300;
 }
