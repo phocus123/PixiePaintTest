@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 import { FileUpload } from '../../../models/FileUpload';
 import { UploadFileService } from '../../../services/upload-file.service';
+import { Observable } from 'rxjs/Observable';
+
 declare let $;
 
 @Component({
@@ -47,20 +49,19 @@ export class HomeComponent implements OnInit {
       this.resizeParallax(winWidth);
     }
 
-    // Call getImages from the upload-file service and populate files array then inititalize the Materialize parallax.
-    this.service.getImages().subscribe(files => {
-      this.files = files;
-    });
-
-    setTimeout(() => {
-      this.initParallax();
-    }, 2000);
+    // Call getImages from the upload-file service and populate files array then inititalize the Materialize parallax 2 seconds later.
+    this.service
+      .getImages()
+      .valueChanges()
+      .subscribe(files => {
+        this.files = files;
+        this.initParallax();
+      });
   }
 
   // Upon the resizing of the window, ie. phone portrait to landscape, call the resizeParallax method.
   onResize() {
     var winWidth = $(window).width();
-
     this.resizeParallax(winWidth);
   }
 
@@ -91,6 +92,8 @@ export class HomeComponent implements OnInit {
   }
 
   initParallax() {
-    $('.parallax').parallax();
+    $(document).ready(function() {
+      $('.parallax').parallax();
+    });
   }
 }

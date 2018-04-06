@@ -5,6 +5,7 @@ import { FileUpload } from '../../../models/FileUpload';
 
 // Declaring Materialize as type any for using Materialize-css toasts within typescript.
 declare let Materialize;
+declare let $;
 
 @Component({
   selector: 'app-contact',
@@ -28,7 +29,13 @@ export class ContactComponent implements OnInit {
 
   constructor(private messageService: UploadMessageService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    $(document).ready(function() {
+      $('.slider').slider({
+        height: 600
+      });
+    });
+  }
 
   // Submitting the contact form details, which is then added to the Firebase database.
   onSubmit({ value }: { value: Message }) {
