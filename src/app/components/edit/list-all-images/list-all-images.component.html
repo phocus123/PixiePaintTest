@@ -1,8 +1,13 @@
+<!-- Section Seperator -->
 <section class="section padding-top">
+  <!-- Card Layout -->
   <div class="card">
     <div class="card-content">
+      <!-- Card Title -->
       <span class="card-title center">All Images</span>
+      <!-- Container with Angular-Bound Loop to list All of the Images -->
       <div *ngFor="let file of fileUploads">
+        <!-- Card Content -->
         <div class="card-content black-text">
           <details-upload [fileUpload]='file'></details-upload>
         </div>
