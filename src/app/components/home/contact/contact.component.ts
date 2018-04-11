@@ -32,8 +32,9 @@ export class ContactComponent implements OnInit {
   ngOnInit() {
     $(document).ready(function() {
       $('.slider').slider({
-        height: 600
+        height: 250
       });
+      // $('.slider').slider('pause');
     });
   }
 

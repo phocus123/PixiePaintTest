@@ -13,7 +13,7 @@
               <input type="text" name="caption" class="validate" [(ngModel)]="caption" required>
               <label for="caption" data-error="Please enter a value" data-success="right">Caption</label>
             </div>
-            <div *ngIf="currentFileUpload" class="progress">
+            <div class="progress">
               <!-- Progress Bar with Determined  -->
               <div class="determinate" [ngStyle]="{width:progress.percentage+'%'}">
                 <p>{{progress.percentage}}%</p>
