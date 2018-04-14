@@ -8,20 +8,8 @@ import { Meta, Title } from '@angular/platform-browser';
 })
 export class GalleryComponent implements OnInit {
   // Assigning the title and meta tags for the gallery page.
-  constructor(_pageTitle: Title, _meta: Meta) {
+  constructor(_pageTitle: Title) {
     _pageTitle.setTitle('Pixie Paint Perth | Gallery');
-    _meta.addTags([
-      {
-        name: 'keywords',
-        content:
-          'pixie paint, pixie paint perth, @pixiepaintperth, pixie paint perth instagram'
-      },
-      {
-        name: 'description',
-        content:
-          'Gallery for Pixie Paint, view more on our instagram - @pixiepaintperth'
-      }
-    ]);
   }
 
   ngOnInit() {}
